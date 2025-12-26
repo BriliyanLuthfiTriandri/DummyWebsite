@@ -1,0 +1,728 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+    padding-top: 80px;
+}
+
+.navbar {
+    width: 100%;
+    background: #ffffff;
+    padding: 15px 40px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 45px;
+    transform: scale(3);
+    transform-origin: left center;
+}
+
+.menu {
+    display: flex;
+    gap: 32px;
+    margin-left: 128px;
+}
+
+/* Efek underline muncul dari tengah */
+.menu a,
+.dropdown>a {
+    position: relative;
+    text-decoration: none;
+    color: #1a1a2e;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/* garis */
+.menu a::after,
+.dropdown>a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: 0.3s ease;
+    transform: translateX(-50%);
+}
+
+/* garis muncul dari tengah */
+.menu a:hover::after,
+.dropdown>a:hover::after {
+    width: 100%;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+/* Tombol merah */
+.btn-red {
+    background: #000000;
+    color: #fff;
+    border: 2px solid #000;
+    padding: 13px 25px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-red:hover {
+    background: #fff;
+    color: #000;
+    border-color: #000;
+}
+
+/* Tombol pink */
+.btn-pink {
+    background: #c0c0c0;
+    color: #212121;
+    border: 2px solid transparent;
+    padding: 13px 22px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-pink:hover {
+    background: #fff;
+    color: #000;
+    border-color: #000;
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown>a {
+    display: inline-block;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    display: none;
+    flex-direction: column;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+/* Menu dropdown */
+.dropdown-menu a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #1a1a2e;
+    font-weight: 600;
+    font-size: 14px;
+    display: block;
+}
+
+/* Hover dropdown */
+.dropdown-menu a:hover {
+    background: #f3f3f3;
+}
+
+/* tampil saat hover */
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+
+/* FOOTER SECTION */
+.footer-section {
+    background: #efefef;
+    padding: 70px 0 40px;
+    font-family: "Inter", sans-serif;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 70px;
+}
+
+.footer-col {
+    flex: 1;
+}
+
+.footer-left {
+    max-width: 330px;
+}
+
+.footer-logo {
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 15px;
+}
+
+.footer-text {
+    color: #1f2937;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.footer-head {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list li {
+    font-size: 16px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.footer-list li:hover {
+    color: #8f8f8f;
+}
+
+.footer-right {
+    max-width: 240px;
+}
+
+.footer-ask {
+    font-size: 36px;
+    font-weight: 800;
+    color: #000;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.footer-desc {
+    font-size: 15px;
+    color: #1f2937;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Button dengan bazel saat hover */
+.footer-button {
+    background: #000;
+    color: #fff;
+    border: 2px solid #000;
+    padding: 14px 28px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.footer-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    border: 2px solid #000;
+    opacity: 0;
+    transition: 0.2s;
+    z-index: -1;
+}
+
+.footer-button:hover {
+    background: #fff;
+    color: #000;
+    border-color: #000;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+
+
+/* HERO BEASISWA SECTION */
+.hero-beasiswa {
+    width: 100%;
+    height: 550px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-beasiswa img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 80px;
+    left: 200px;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 40px;
+    font-weight: 650;
+    margin-bottom: 10px;
+}
+
+.hero-line {
+    width: 100px;
+    margin-top: 30px;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+/* SECTION BEASISWA INFO */
+.beasiswa-info {
+    width: 100%;
+    padding: 60px 0;
+    background: #fff;
+    font-family: "Inter", sans-serif;
+}
+
+.beasiswa-wrapper {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.beasiswa-img {
+    flex: 1;
+}
+
+.beasiswa-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.beasiswa-text {
+    flex: 1;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.beasiswa-text h2 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #303030;
+}
+
+.beasiswa-text ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.beasiswa-text ul li {
+    margin-bottom: 12px;
+}
+
+/* BUTTON BARU (agar tidak bentrok dengan class lain) */
+.btn-red-beasiswa {
+    display: inline-block;
+    background: #000000;
+    color: #fff;
+    padding: 12px 26px;
+    border-radius: 8px;
+    font-weight: 500;
+    margin-top: 20px;
+    text-decoration: none;
+    border: 2px solid #000;
+    /* border hitam */
+}
+
+.btn-red-beasiswa:hover {
+    background: #808080;
+    border: 2px solid #000;
+    /* tetap border hitam */
+}
+
+
+.note {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mobile responsive */
+
+
+/* ============================================
+   MOBILE RESPONSIVE (≤ 768px)
+============================================ */
+
+/* MOBILE BUTTONS: Hanya tampil di mobile */
+.mobile-buttons {
+    display: none;
+    /* default desktop: sembunyikan */
+}
+
+@media (max-width: 768px) {
+    .mobile-buttons {
+        display: flex;
+        /* tampilkan di mobile */
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* ===== NAVBAR ===== */
+    .nav-container {
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        width: 100%;
+    }
+
+    .hamburger {
+        display: flex;
+        width: 30px;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 2000;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .hamburger span {
+        width: 100%;
+        height: 4px;
+        background: #333;
+        transition: 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* HIDE DESKTOP BUTTONS ON MOBILE */
+    .nav-buttons {
+        display: none !important;
+    }
+
+    /* SIDEBAR MENU */
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;
+        height: 100%;
+        background: #fff;
+        flex-direction: column;
+        padding: 80px 25px;
+        gap: 20px;
+        display: flex;
+        box-shadow: -3px 0 10px rgba(0, 0, 0, 0.1);
+        transition: 0.35s ease;
+        z-index: 1500;
+    }
+
+    .menu.menu-open {
+        right: 0;
+    }
+
+    .menu a {
+        font-size: 18px;
+        color: #333;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    /* ============================================
+       DROPDOWN MOBILE PERBAIKAN
+    ============================================ */
+    .dropdown {
+        position: relative;
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        display: none;
+        /* tetap hidden default */
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 15px;
+        background: #f9f9f9;
+        /* background supaya terlihat */
+        border-left: 3px solid #333;
+        /* border kiri optional */
+        margin: 5px 0 10px 0;
+        /* jarak atas & bawah lebih rapat */
+        box-shadow: none;
+        position: relative;
+        /* relative agar muncul tepat di bawah parent */
+    }
+
+    .dropdown.open .dropdown-menu {
+        display: flex;
+    }
+
+    .dropdown-menu a {
+        padding: 10px 0;
+        font-size: 16px;
+        color: #333;
+        text-decoration: none;
+    }
+
+    /* ============================================
+       MOBILE BUTTONS
+    ============================================ */
+    .mobile-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .mobile-buttons button {
+        width: 100%;
+        padding: 12px 20px;
+        border-radius: 8px;
+        border: none;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .btn-red {
+        background-color: red;
+        color: #fff;
+    }
+
+    .btn-pink {
+        background-color: pink;
+        color: #333;
+    }
+
+    /* ============================================
+       FOOTER FIX
+    ============================================ */
+    footer {
+        padding: 40px 20px !important;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 25px !important;
+        text-align: center;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .footer-info,
+    .footer-reach,
+    .footer-contact,
+    .footer-social {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .footer-contact h3 {
+        margin-bottom: 10px !important;
+    }
+
+    .footer-contact p {
+        margin: 0 !important;
+        padding: 0 !important;
+        line-height: 22px;
+    }
+}
+
+
+/* ============================================
+   MOBILE FIX TAMPAILAN RAPIH
+============================================ */
+@media (max-width: 768px) {
+
+    /* Kontainer utama supaya tidak melebar */
+    .beasiswa-wrapper,
+    .hero-content,
+    .footer-container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    /* HERO CONTENT */
+    .hero-content {
+        left: 20px !important;
+        bottom: 50px !important;
+        text-align: left;
+    }
+
+    .hero-content h1 {
+        font-size: 28px !important;
+        line-height: 1.2;
+    }
+
+    .hero-line {
+        width: 80px;
+    }
+
+    /* SECTION BEASISWA INFO */
+    .beasiswa-wrapper {
+        flex-direction: column !important;
+        gap: 25px !important;
+    }
+
+    .beasiswa-img,
+    .beasiswa-text {
+        width: 100% !important;
+    }
+
+    .beasiswa-text h2 {
+        font-size: 22px !important;
+    }
+
+    .beasiswa-text ul li {
+        font-size: 15px !important;
+        margin-bottom: 10px;
+    }
+
+    /* DROPDOWN MOBILE RAPIH */
+    .dropdown>a::after {
+        content: "\25BC";
+        /* tanda panah bawah */
+        float: right;
+        margin-left: 10px;
+        font-size: 12px;
+    }
+
+    .dropdown-menu a {
+        padding-left: 20px !important;
+    }
+
+    /* MOBILE BUTTONS */
+    .mobile-buttons button {
+        font-size: 16px;
+        padding: 14px 20px;
+    }
+
+    /* FOOTER */
+    .footer-left,
+    .footer-right,
+    .footer-col {
+        text-align: center !important;
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    .footer-button {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .footer-copy {
+        font-size: 13px !important;
+    }
+}
+
+
+/* =========================
+   FIX DROPDOWN MOBILE ONLY
+   ========================= */
+@media (max-width: 768px) {
+
+    /* menu item jadi anchor untuk dropdown */
+    .menu-item {
+        position: static;
+    }
+
+    /* dropdown ikut alur normal */
+    .dropdown-menu {
+        position: static !important;
+        width: 100%;
+        max-width: 100%;
+        margin: 8px 0 0 0;
+        padding-left: 16px;
+        box-shadow: none;
+        background: transparent;
+        display: none;
+    }
+
+    /* tampil saat aktif */
+    .menu-item.active .dropdown-menu {
+        display: block;
+    }
+
+    /* item dropdown */
+    .dropdown-menu li a {
+        padding: 10px 0;
+        font-size: 16px;
+    }
+}

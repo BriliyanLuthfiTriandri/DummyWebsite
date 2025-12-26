@@ -1,0 +1,1371 @@
+/* Global */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #222;
+}
+
+/* Topbar */
+.topbar {
+    background-color: #000000;
+    color: white;
+    font-size: 14px;
+}
+
+.topbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 16px;
+}
+
+.top-menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.top-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.top-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: border-bottom 0.3s ease;
+    border-bottom: 0 solid transparent;
+}
+
+.navbar.scrolled {
+    border-bottom: 3px solid #000000;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logo img {
+    height: 120px;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav-menu a:hover {
+    color: #5f5e5e;
+}
+
+.lang,
+.search-btn {
+    margin-left: 16px;
+}
+
+.lang img {
+    width: 24px;
+    height: auto;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #6f6f6f;
+}
+
+.search-btn:hover {
+    color: #808080;
+}
+
+/* Navbar Responsive */
+@media (max-width: 900px) {
+    .nav-content {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .logo img {
+        position: static;
+        transform: none;
+        height: 80px;
+        margin-bottom: 8px;
+    }
+}
+
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Saat muncul */
+#scrollTopBtn.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* Efek hover */
+#scrollTopBtn:hover {
+    background-color: #222;
+}
+
+/* === DROPDOWN MENU === */
+.nav-menu li {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    display: none;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background: #f2f2f2;
+}
+
+/* Tampilkan saat hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Untuk menu bahasa (flag) */
+.dropdown.lang .dropdown-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* Footer */
+.footer {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Bagian atas footer */
+.footer-top {
+    background-color: #000;
+    /* ubah jadi hitam */
+    color: #fff;
+    /* teks jadi putih */
+    padding: 155px 0 100px;
+    position: relative;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+    top: -130px;
+}
+
+.footer-section {
+    text-align: left;
+}
+
+/* Heading */
+.footer-section h3 {
+    font-weight: 500;
+    font-size: 23px;
+    margin-bottom: 10px;
+    color: #fff;
+    /* ubah jadi putih */
+}
+
+/* Paragraf */
+.footer-section p {
+    margin: 4px 0;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #fff;
+    /* ubah jadi putih */
+}
+
+/* Daftar */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px;
+}
+
+.footer-section ul li {
+    margin-bottom: 6px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    /* ubah link jadi putih */
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #aaa;
+    /* hover jadi abu muda */
+}
+
+/* Logo */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.footer-logo img {
+    height: 100px;
+}
+
+/* Sosial Media */
+.footer-sosmed a {
+    color: #fff;
+    /* ubah icon jadi putih */
+    font-size: 18px;
+    margin-right: 10px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.footer-sosmed a:hover {
+    transform: scale(1.2);
+    color: #aaa;
+    /* hover jadi abu muda */
+}
+
+/* Bagian bawah footer */
+.footer-bottom {
+    background-color: #000;
+    color: #fff;
+    font-size: 13px;
+    padding: 15px 0;
+}
+
+.footer-bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 20px;
+}
+
+
+/* Responsif */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+        top: 0;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    .footer-sosmed {
+        justify-content: center;
+    }
+
+    .footer-bottom-container {
+        text-align: center;
+        padding: 0 10px;
+    }
+}
+
+/* === DROPDOWN MENU === */
+.nav-menu li {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    display: none;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background: #f2f2f2;
+}
+
+/* Tampilkan saat hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Untuk menu bahasa (flag) */
+.dropdown.lang .dropdown-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Dropdown utama */
+.navbar ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 10px 0;
+    min-width: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.navbar ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* SUBMENU (Sekilas Tentang) */
+.sub-dropdown {
+    position: relative;
+}
+
+.sub-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: white;
+    padding: 10px 0;
+    min-width: 180px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Muncul hanya ketika hover pada Sekilas Tentang */
+.sub-dropdown:hover .sub-dropdown-content {
+    display: block;
+}
+
+/* Style item submenu */
+.dropdown-content li,
+.sub-dropdown-content li {
+    padding: 8px 15px;
+    list-style: none;
+}
+
+.dropdown-content li a,
+.sub-dropdown-content li a {
+    text-decoration: none;
+    color: #0f172a;
+    display: block;
+}
+
+.dropdown-content li:hover,
+.sub-dropdown-content li:hover {
+    background: #f1f5f9;
+}
+
+/* Garis bawah kecil untuk menu aktif */
+.nav-menu a.active {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-menu a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -31px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #000;
+    border-radius: 2px;
+}
+
+/* HERO FASILITAS SECTION */
+.hero-fasilitas {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-fasilitas img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    font-weight: 650;
+    margin-bottom: 10px;
+}
+
+.hero-line {
+    width: 130px;
+    margin: 20px auto 0;
+    height: 4px;
+    background: #fff;
+    border-radius: 2px;
+}
+
+/* === DETAIL FASILITAS SECTION === */
+.fasilitas-detail {
+    max-width: 1200px;
+    margin: 80px auto;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Judul mini + garis kiri & kanan */
+.judul-mini-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.judul-mini {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.mini-line {
+    width: 80px;
+    height: 2px;
+    background: #000000;
+}
+
+/* Judul utama */
+.judul-besar {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+/* Gambar */
+.fasilitas-img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+/* Paragraf */
+.fasilitas-text {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+
+
+/* === FASILITAS UMUM ASRAMA === */
+.fasilitas-asrama-section {
+    max-width: 1200px;
+    margin: 100px auto;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Judul */
+.fasilitas-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.fasilitas-title span {
+    color: #7f7f7f;
+}
+
+/* GRID FASILITAS */
+.fasilitas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 40px;
+    padding: 0 40px;
+}
+
+/* ITEM BIASA */
+.fasilitas-item {
+    background: linear-gradient(to bottom, #000000, #1a1a1a, #2a2a2a);
+    padding: 18px 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* ITEM PANJANG: MEMBENTANG 2 KOLOM */
+.fasilitas-panjang {
+    background: linear-gradient(to bottom, #000000, #1a1a1a, #2a2a2a);
+    padding: 18px 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 20px;
+    text-align: center;
+    grid-column: span 2;
+}
+
+
+/* === DETAIL SECTION VERSI 2 (ANTI TABRAK) === */
+
+.detail2-section {
+    max-width: 1200px;
+    margin: 100px auto;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.detail2-mini-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.detail2-mini-title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.detail2-line {
+    width: 80px;
+    height: 2px;
+    background: #000000;
+}
+
+.detail2-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+.detail2-img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+.detail2-text {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+    text-align: justify;
+}
+
+
+/* Animasi fade up */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+}
+
+.show-from-bottom {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.show-from-top {
+    opacity: 1;
+    transform: translateY(-40px);
+}
+
+
+
+/* ===== SECTION STYLE ===== */
+.kantin-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+/* Title */
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: -20px;
+}
+
+.section-title .line {
+    width: 60px;
+    height: 2px;
+    background: #000000;
+}
+
+.section-title h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.judul-kantin {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+/* IMAGE WRAPPER */
+.kantin-images {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.kantin-images img {
+    width: 48%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ====== ANIMATIONS ====== */
+.img-left,
+.img-right {
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+/* From left */
+.img-left {
+    transform: translateX(-100px);
+}
+
+/* From right */
+.img-right {
+    transform: translateX(100px);
+}
+
+/* When showing */
+.img-left.show,
+.img-right.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Paragraph */
+.kantin-desc {
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: justify;
+    margin-top: 20px;
+}
+
+
+
+/* === LOKASI KANTIN === */
+.kantin-section {
+    max-width: 1200px;
+    margin: 30px auto;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Judul */
+.kantin-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.kantin-title span {
+    color: #7f7f7f;
+}
+
+/* GRID */
+.kantin-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 40px;
+    padding: 0 40px;
+}
+
+/* ITEM */
+.kantin-item {
+    background: linear-gradient(to bottom, #000000, #1a1a1a, #2a2a2a);
+    padding: 18px 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.kantin-item.panjang {
+    grid-column: span 2;
+}
+
+
+/* === KENDARAAN SECTION === */
+.kendaraan-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Judul mini + garis kiri & kanan */
+.kendaraan-mini-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.kendaraan-mini-title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.kendaraan-line {
+    width: 80px;
+    height: 2px;
+    background: #000000;
+}
+
+.kendaraan-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.kendaraan-img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+.kendaraan-text {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* === COLUMNS === */
+.kendaraan-columns {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* KIRI – DUA GAMBAR */
+.kendaraan-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    max-width: 1200px;
+}
+
+/* Gambar di kolom kiri – tinggi dikurangi */
+.kendaraan-column-img {
+    width: 100%;
+    max-width: 1200px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* KANAN – PARAGRAF */
+.kendaraan-right {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+}
+
+/* Paragraf justify */
+.kendaraan-right .kendaraan-text {
+    text-align: justify;
+}
+
+
+
+
+
+/* === SOCIAL ROOM SECTION === */
+.social-room-section {
+    max-width: 1200px;
+    margin: 100px auto;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Mini title + garis */
+.social-mini-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.social-mini-title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.social-line {
+    width: 80px;
+    height: 2px;
+    background: #000000;
+}
+
+/* Judul utama */
+.social-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+/* Row gambar */
+.social-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 25px auto;
+}
+
+.social-img {
+    width: 32%;
+    /* tiap gambar lebih kecil, total + gap < 1200px */
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Paragraf */
+.social-text {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 22px;
+}
+
+
+/* === LANGUAGE SECTION === */
+.language-section {
+    max-width: 1200px;
+    margin: 100px auto;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Mini title + garis */
+.language-mini-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.language-mini-title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.language-line {
+    width: 80px;
+    height: 2px;
+    background: #000000;
+}
+
+/* Judul utama */
+.language-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+/* Gambar */
+.language-img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+/* Paragraf */
+.language-text {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+    text-align: justify;
+}
+
+/* === GRID LANGUAGE ITEMS === */
+.language-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 40px;
+    margin-top: 30px;
+}
+
+.language-item {
+    background: linear-gradient(to bottom, #000000, #1a1a1a, #2a2a2a);
+    padding: 18px 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+/* === FASILITAS DISABILITAS SECTION === */
+.fasilitas-disabilitas-section {
+    max-width: 1200px;
+    margin: 100px auto;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Mini title + garis */
+.fasilitas-disabilitas-mini-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.fasilitas-disabilitas-mini-title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.fasilitas-disabilitas-line {
+    width: 80px;
+    height: 2px;
+    background: #000000;
+}
+
+/* Judul utama */
+.fasilitas-disabilitas-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+/* Gambar */
+.fasilitas-disabilitas-img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+/* Paragraf */
+.fasilitas-disabilitas-text {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+    text-align: justify;
+}
+
+
+
+/* === GREEN HOUSE SECTION === */
+.greenhouse-section {
+    max-width: 1200px;
+    margin: 100px auto;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Mini title + garis */
+.greenhouse-mini-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.greenhouse-mini-title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.greenhouse-line {
+    width: 80px;
+    height: 2px;
+    background: #000000;
+}
+
+/* Judul utama */
+.greenhouse-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+/* Gambar */
+.greenhouse-img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+/* Paragraf */
+.greenhouse-text {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+    text-align: justify;
+}
+
+
+
+/* === HOTEL SECTION === */
+.hotel-section {
+    max-width: 1200px;
+    margin: 100px auto;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Mini title + garis */
+.hotel-mini-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.hotel-mini-title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.hotel-line {
+    width: 80px;
+    height: 2px;
+    background: #000000;
+}
+
+/* Judul utama */
+.hotel-title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+/* Gambar */
+.hotel-img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mobile */
+
+
+/* Sembunyikan hamburger & search mobile saat desktop */
+.mobile-icons {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    /* ================= NAVBAR ================= */
+
+    .navbar-telu {
+        position: relative;
+        z-index: 10000;
+        overflow: visible;
+        width: 100%;
+    }
+
+    .nav-container {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        overflow: visible;
+    }
+
+    /* Logo kiri */
+    .logo {
+        display: flex;
+        align-items: center;
+        z-index: 10001;
+    }
+
+    /* Icon kanan (hamburger + search) */
+    .mobile-icons {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-left: auto;
+        z-index: 10001;
+    }
+
+    .mobile-icons button,
+    .mobile-icons .hamburger {
+        font-size: 26px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* ================= DROPDOWN MENU ================= */
+
+    nav .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        border-top: 1px solid #ddd;
+        z-index: 99999;
+    }
+
+    nav .nav-menu.show {
+        display: flex;
+    }
+
+    nav .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid #eee;
+    }
+
+    nav .nav-menu li a {
+        width: 100%;
+        display: block;
+        padding: 12px 20px;
+    }
+
+    /* Dropdown dalam dropdown */
+    .dropdown-content,
+    .dropdown-menu {
+        position: static;
+        background: #f8f8f8;
+        box-shadow: none;
+        border-left: 3px solid #ddd;
+        padding-left: 10px;
+        display: none;
+    }
+
+    .dropdown.open>.dropdown-content,
+    .dropdown.open>.dropdown-menu {
+        display: block;
+    }
+
+    .sub-dropdown-content {
+        position: static;
+        background: #eee;
+        border-left: 3px solid #ccc;
+        display: none;
+        padding-left: 10px;
+    }
+
+    .sub-dropdown.open>.sub-dropdown-content {
+        display: block;
+    }
+
+    /* ================= FULL WIDTH FIX ================= */
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background: #ffffff;
+    }
+
+    .topbar,
+    .topbar-inner,
+    .page-header,
+    .page-header-container,
+    .content-wrapper,
+    .author-section,
+    .author-container,
+    .nav-section,
+    .footer-info-section,
+    .footer-info,
+    .footer,
+    .footer-container {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* ================= KONTEN ================= */
+
+    .content-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+
+
+    .content-left,
+    .sidebar {
+        width: 100%;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    /* ================= GAMBAR ================= */
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* ================= ANTI CLIP ================= */
+
+    section,
+    header,
+    footer {
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+}

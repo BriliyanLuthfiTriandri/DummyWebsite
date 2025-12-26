@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universitas ASE | Kampus terbaik</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="container">
+            <ul class="top-menu">
+                <li><a href="direktori.html">Direktori</a></li>
+                <li><a href="bterkini.html">Berita Terkini</a></li>
+                <li><a href="unduh.html">Unduh</a></li>
+                <li><a href="buletin.html">Buletin</a></li>
+                <li><a href="wisuda.html">Wisuda</a></li>
+                <li><a href="akreditasi.html">Akreditasi</a></li>
+                <li><a href="aplikasi.html">Aplikasi AS</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="logokampus.png" alt="Logo Universitas">
+            </div>
+
+            <!-- === Tambahan Mobile Icons (Tidak Mengubah Kode Lama) === -->
+            <div class="mobile-icons">
+                <button class="search-btn-mobile">🔍</button>
+                <div class="hamburger" id="hamburger">☰</div>
+            </div>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li class="dropdown">
+                        <a href="#">Tentang ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="ucapan.html">Ucapan Rektor</a></li>
+                            <li class="sub-dropdown">
+                                <a href="#">Sekilas Tentang ▸</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="sejarah.html">Sejarah Aman Sejahtera</a></li>
+                                    <li><a href="visimisi.html">Visi, Misi dan Tujuan</a></li>
+                                    <li><a href="">Keunggulan</a></li>
+                                    <li><a href="">Berkuliah di AS University</a></li>
+                                    <li><a href="">Keanekaragaman</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Tur Kampus</a></li>
+                            <li><a href="">Struktur Organisasi</a></li>
+                            <li><a href="">Angka</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Akademik ▾</a>
+                        <ul class="dropdown-menu">
+                            <li class="sub-dropdown">
+                                <a href="fteknikelek.html">Fakultas Teknik Elektro ▸</a>
+                                <a href="">Fakultas Ekonomi dan Bisnis ▸</a>
+                                <a href="">Fakultas Hukum ▸</a>
+                                <a href="">Fakultas Ilmu Pemerintahan ▸</a>
+                                <a href="">Fakultas Hubungan International ▸</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="elektro.html">S1 Teknik Elektro</a></li>
+                                    <li><a href="">S1 Teknik Fisika</a></li>
+                                    <li><a href="">S1 Teknik Biomedis</a></li>
+                                    <li><a href="">S1 Teknik Elektromedis</a></li>
+                                    <li><a href="">S1 Teknik Sistem Energi</a></li>
+                                    <li><a href="">S1 Teknik Komputer</a></li>
+                                    <li><a href="">S1 Teknik Telekomunikasi</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Admisi</a></li>
+
+                    <li class="dropdown">
+                        <a href="#">Riset & Inovasi ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Pusat Penelitian</a></li>
+                            <li><a href="#">Inovasi Unggulan</a></li>
+                            <li><a href="#">Entrepreneurial</a></li>
+                            <li><a href="#">Techno Park</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Kehidupan Kampus ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="fasilitasu.html">Fasilitas Unggulan</a></li>
+                            <li><a href="fasilitasd.html">Fasilitas Disabilitas</a></li>
+                            <li><a href="">Kampus Berdampak</a></li>
+                            <li><a href="">Unit Kegiatan Mahasiswa</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">TUNC ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Tentang TUNC</a></li>
+                            <li><a href="#">Program</a></li>
+                            <li><a href="#">Galeri</a></li>
+                            <li><a href="#">Hubungi Kami</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown lang">
+                        <a href="#"><img src="https://flagcdn.com/w20/id.png" alt="ID"> ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><img src="https://flagcdn.com/w20/id.png" alt="ID"> Indonesia</a></li>
+                            <li><a href="#"><img src="https://flagcdn.com/w20/gb.png" alt="EN"> English</a></li>
+                        </ul>
+                    </li>
+
+                    <li><button class="search-btn">🔍</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <script>
+        const burger = document.getElementById("hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        // Toggle nav saat hamburger ditekan
+        burger.addEventListener("click", () => {
+            navMenu.classList.toggle("show");
+        });
+
+        // Dropdown utama
+        document.querySelectorAll('.dropdown > a').forEach(a => {
+            a.addEventListener('click', e => {
+                if (window.innerWidth <= 900) {
+                    e.preventDefault();
+                    a.parentElement.classList.toggle("open");
+                }
+            });
+        });
+
+        // Sub dropdown
+        document.querySelectorAll('.sub-dropdown > a').forEach(a => {
+            a.addEventListener('click', e => {
+                if (window.innerWidth <= 900) {
+                    e.preventDefault();
+                    a.parentElement.classList.toggle("open");
+                }
+            });
+        });
+
+        // Jika ukuran layar dilebarkan, pastikan menu kembali normal
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 900) {
+                navMenu.classList.remove("show");
+
+                document.querySelectorAll(".dropdown.open")
+                    .forEach(d => d.classList.remove("open"));
+
+                document.querySelectorAll(".sub-dropdown.open")
+                    .forEach(s => s.classList.remove("open"));
+            }
+        });
+    </script>
+
+
+
+
+
+    <!-- Video -->
+    <section class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="video.mp4" type="video/mp4">
+            Browser Anda tidak mendukung tag video.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+            <h1>UNIVERSITAS AMAN SEJAHTERA</h1>
+            <h3>Kampus Swasta Terbaik</h3>
+            <p>National Excellence In Entrepreneurial University</p>
+        </div>
+    </section>
+
+    <!-- Akademik -->
+    <section class="akademik">
+        <div class="container">
+            <h2>Akademik</h2>
+            <p class="subtitle">
+                Mempersiapkan mahasiswa untuk memberikan kontribusi yang berarti pada masyarakat, bangsa dan dunia
+            </p>
+
+            <div class="akademik-grid">
+                <div class="akademik-item">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <h3>Mengapa AS</h3>
+                    <p>Tel-U menjadi Perguruan Tinggi Swasta Terbaik di Indonesia yang telah terakreditasi Unggul dari
+                        BAN-PT.</p>
+                </div>
+
+                <div class="akademik-item">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <h3>Tentang Fakultas</h3>
+                    <p>Terdapat 7 Fakultas dan 82 Program Studi terdiri atas Program Doktoral, Magister, Sarjana,
+                        Sarjana Terapan, dan Diploma.</p>
+                </div>
+
+                <div class="akademik-item">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h3>Berkuliah di AS</h3>
+                    <p>Tel-U memiliki layanan sistem akademik berbasis digital yang telah terintegrasi untuk mendukung
+                        kegiatan pembelajaran.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fakta -->
+    <section class="fakta">
+        <div class="container">
+            <h2>Fakta Aman Sejahtera</h2>
+            <div class="fakta-grid">
+                <div class="fakta-item">
+                    <h3 class="counter" data-target="124">0</h3>
+                    <p>Dosen</p>
+                </div>
+                <div class="fakta-item">
+                    <h3 class="counter" data-target="2245">0</h3>
+                    <p>Mahasiswa</p>
+                </div>
+                <div class="fakta-item">
+                    <h3 class="counter" data-target="31325">0</h3>
+                    <p>Alumni</p>
+                </div>
+                <div class="fakta-item">
+                    <h3 class="counter" data-target="41235">0</h3>
+                    <p>Hektar Kampus</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- International Recognitions -->
+    <section class="recognition">
+        <div class="container">
+            <h2>International Recognitions</h2>
+            <p class="subtitle">
+                As a Research and Entrepreneurial University<br>
+                Universitas Aman Sejahtera is well-known throughout the world
+            </p>
+
+            <div class="recognition-logos">
+                <img src="Logo-KEMENKES-RI.png" alt="logo">
+                <img src="Logo-SNI-Awards.png" alt="logo">
+                <img src="Logo-UI-Green-Metric.png" alt="logo">
+                <img src="Logo-UNIRANKS.png" alt="logo">
+                <img src="Logo-KEMENKES-RI.png" alt="logo">
+            </div>
+
+            <div class="recognition-logos small">
+                <img src="Logo-KEMENKES-RI.png" alt="logo">
+                <img src="Logo-UNIRANKS.png" alt="logo">
+                <img src="Logo-UI-Green-Metric.png" alt="logo">
+                <img src="Logo-THE-WUR_Hitam-1.png" alt="logo">
+                <img src="Logo-SNI-Awards.png" alt="logo">
+                <img src="Logo-KEMENKES-RI.png" alt="logo">
+                <img src="Logo-SNI-Awards.png" alt="logo">
+                <img src="Logo-UI-Green-Metric.png" alt="logo">
+                <img src="Logo-UNIRANKS.png" alt="logo">
+            </div>
+
+
+    </section>
+
+
+    <section class="berita">
+        <h2>Berita Terkini</h2>
+        <p class="subtitle">Informasi terkini terkait Civitas Academica Telkom University</p>
+
+        <div class="berita-grid">
+            <!-- Berita utama -->
+            <div class="berita-utama">
+                <img src="berita.png" alt="Berita Utama">
+                <div class="berita-overlay">
+                    <span class="kategori">Pengabdian Masyarakat</span>
+                    <h3>Mahasiswa Telkom University Wujudkan Kepedulian Sosial Melalui Program</h3>
+                    <a href="#" class="baca">BACA SELENGKAPNYA</a>
+                </div>
+            </div>
+
+            <!-- Kolom kanan -->
+            <div class="berita-kolom">
+                <div class="berita-item">
+                    <img src="berita.png" alt="Berita 2">
+                    <div class="berita-overlay">
+                        <span class="kategori">Kehidupan Kampus</span>
+                        <h4>Surabaya: Kota Pahlawan dengan Ribuan Keunggulan untuk Mahasiswa</h4>
+                        <a href="#" class="baca">BACA SELENGKAPNYA</a>
+                    </div>
+                </div>
+
+                <div class="berita-item">
+                    <img src="berita.png" alt="Berita 3">
+                    <div class="berita-overlay">
+                        <span class="kategori">Pendidikan</span>
+                        <h4>7 Tanda Kalau Kamu Punya Bakat Film, Apa Saja?</h4>
+                        <a href="#" class="baca">BACA SELENGKAPNYA</a>
+                    </div>
+                </div>
+
+                <div class="berita-item">
+                    <img src="berita.png" alt="Berita 4">
+                    <div class="berita-overlay">
+                        <span class="kategori">Pendidikan</span>
+                        <h4>Catat! Ini Perbedaan D3 Sistem Informasi Akuntansi dan</h4>
+                        <a href="#" class="baca">BACA SELENGKAPNYA</a>
+                    </div>
+                </div>
+
+                <div class="berita-item">
+                    <img src="berita.png" alt="Berita 5">
+                    <div class="berita-overlay">
+                        <span class="kategori">Prestasi</span>
+                        <h4>Mahasiswa Sistem Informasi Telkom University Kembangkan Aplikasi Monitoring</h4>
+                        <a href="#" class="baca">BACA SELENGKAPNYA</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tombol-lihat">
+            <button>LIHAT SELENGKAPNYA</button>
+            <hr class="garis-pemisah">
+        </div>
+        </div>
+    </section>
+
+
+    <section class="kampus-kami">
+        <h2>Kampus Kami</h2>
+        <p>Hadirkan Pendidikan berkualitas tinggi di seluruh bangsa</p>
+
+        <div class="kampus-grid">
+            <a href="#" class="kampus-item">
+                <img src="berita.png" alt="Bandung Main Campus">
+                <div class="kampus-overlay">
+                    <h3>Mars</h3>
+                </div>
+            </a>
+
+            <a href="#" class="kampus-item">
+                <img src="berita.png" alt="Jakarta">
+                <div class="kampus-overlay">
+                    <h3>Pluto</h3>
+                </div>
+            </a>
+
+            <a href="#" class="kampus-item">
+                <img src="berita.png" alt="Surabaya">
+                <div class="kampus-overlay">
+                    <h3>Saturnus</h3>
+                </div>
+            </a>
+
+            <a href="#" class="kampus-item">
+                <img src="berita.png" alt="Purwokerto">
+                <div class="kampus-overlay">
+                    <h3>Bekasi</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Riset, Inovasi dan Entrepreneurial -->
+    <section class="riset">
+        <div class="container">
+            <h2>Riset, Inovasi dan Entrepreneurial</h2>
+            <p class="subtitle">
+                Sebagai kampus Research and Entrepreneurial University, Universitas Aman Sejahtera berperan aktif
+                dalam pengembangan teknologi, sains, dan seni berbasis teknologi dan informasi.
+            </p>
+
+            <div class="riset-grid">
+                <a href="riset.html" class="riset-item">
+                    <img src="berita.png" alt="Riset & Inovasi">
+                    <div class="overlay">
+                        <h3>Riset & Inovasi</h3>
+                        <p>Menghasilkan berbagai riset & inovasi yang bermanfaat bagi kehidupan masyarakat.</p>
+                    </div>
+                </a>
+
+                <a href="inovasi.html" class="riset-item">
+                    <img src="berita.png" alt="Inovasi Unggulan">
+                    <div class="overlay">
+                        <h3>Inovasi Unggulan</h3>
+                        <p>Menghasilkan produk inovasi unggulan yang telah dimanfaatkan oleh khalayak.</p>
+                    </div>
+                </a>
+
+                <a href="entrepreneur.html" class="riset-item">
+                    <img src="berita.png" alt="Entrepreneurial">
+                    <div class="overlay">
+                        <h3>Entrepreneurial</h3>
+                        <p>Berperan aktif dalam mencetak Entrepreneur Muda yang unggul.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Kehidupan Kampus -->
+    <section class="kehidupan-kampus">
+        <div class="container">
+            <h2>Kehidupan Kampus</h2>
+            <p class="subtitle">
+                Dalam rangka mendukung kegiatan akademik dan non-akademik mahasiswa,
+                Tel-U mengeluarkan serangkaian kebijakan serta menyediakan berbagai
+                fasilitas unggulan serta beragam unit aktivitas.
+            </p>
+
+            <!-- Baris Gambar -->
+            <div class="kampus-images">
+                <img src="berita.png" alt="Kebijakan">
+                <img src="berita.png" alt="Fasilitas Unggulan">
+                <img src="berita.png" alt="Unit Kegiatan Mahasiswa">
+            </div>
+
+            <!-- Baris Tulisan -->
+            <div class="kampus-texts">
+                <div class="text-item">
+                    <h3>Kebijakan</h3>
+                    <p>Telkom University mengeluarkan beberapa kebijakan untuk menjamin integritas civitas academica
+                        Telkom University.</p>
+                </div>
+
+                <div class="text-item">
+                    <h3>Fasilitas Unggulan</h3>
+                    <p>Telkom University menyediakan beragam fasilitas unggulan untuk mendukung kegiatan akademis dan
+                        non-akademis mahasiswa.</p>
+                </div>
+
+                <div class="text-item">
+                    <h3>Unit Kegiatan Mahasiswa</h3>
+                    <p>Total 50 Unit Kegiatan Mahasiswa yang dapat mendukung kegiatan mahasiswa di Kampus Utama Telkom
+                        University.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero-lingkaran">
+        <div class="hero-lingkaran-container">
+            <div class="hero-left">
+                <img src="orangno.png" alt="Mahasiswa University">
+            </div>
+            <div class="hero-right">
+                <img src="numbersatu.png" alt="#1 Best Private University Indonesia" class="best-text">
+                <h1>Bergabung<br>Bersama Kami</h1>
+                <p>Universitas Swasta Terbaik di Indonesia</p>
+                <a href="smb.html" class="cta-btn">Mari Bergabung</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="foto-kampus">
+        <img src="pemandangan.png" alt="Foto Kampus" />
+    </section>
+
+
+
+    <!-- Section: Campus Media -->
+    <section class="campus-media">
+        <div class="media-container">
+
+            <!-- Header IG -->
+            <div class="ig-header">
+                <div class="ig-logo">
+                    <img src="logokampus.png" alt="Telkom University Logo">
+                </div>
+                <div class="ig-info">
+                    <div class="ig-username">@telkomuniversity</div>
+                    <div class="ig-bio">
+                        Kampus Swasta #1 di Indonesia | Creating the Future<br>
+                        @telkomuniversity_jkt<br>
+                        @telkomuniversity_surabaya<br>
+                        @telkomuniversity_purwokerto<br>
+                        Admisi:@smbtelkom
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 Foto Atas -->
+            <div class="ig-gallery">
+                <div class="ig-item">
+                    <img src="berita.png" alt="Telkom University National Campus">
+                    <div class="caption">
+                        Telkom University National Campus
+                    </div>
+                </div>
+                <div class="ig-item">
+                    <img src="berita.png" alt="Digital Media, Culture & Humanities">
+                    <div class="caption">
+                        Digital Media, Culture & Humanities
+                    </div>
+                </div>
+                <div class="ig-item">
+                    <img src="berita.png" alt="Himbauan Waspada Penipuan">
+                    <div class="caption">
+                        Himbauan: Waspada Penipuan
+                    </div>
+                </div>
+                <div class="ig-item">
+                    <img src="berita.png" alt="Apresiasi Pegawai Telkom University">
+                    <div class="caption">
+                        Apresiasi Pegawai Telkom University
+                    </div>
+                </div>
+            </div>
+
+            <!-- Banner Besar -->
+            <div class="campus-visit">
+                <img src="pemandangan.png" alt="Campus Visit Telkom University">
+                <div class="visit-content">
+                    <h1>CAMPUS VISIT</h1>
+                    <h2>TELKOM UNIVERSITY</h2>
+                    <div class="visit-buttons">
+                        <a href="#" class="btn-red">Kunjungi Kami</a>
+                        <a href="#" class="btn-gray">Survei Kepuasan Kunjungan</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Kartu Bawah -->
+            <div class="info-cards">
+                <div class="card">
+                    <img src="berita.png" alt="Halo Rektor">
+                    <div class="card-btn">
+                        <a href="#">Klik Disini</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="berita.png" alt="Suara TelUtizen">
+                    <div class="card-btn">
+                        <a href="#">Klik Disini</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="berita.png" alt="PPKPT">
+                    <div class="card-btn">
+                        <a href="#">Klik Disini</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="foto-kampusbawah">
+        <img src="pemandangan.png" alt="Foto Kampus bawah" />
+    </section>
+
+
+
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-container">
+
+                <!-- Bagian Kontak -->
+                <div class="footer-section">
+                    <h3>Kontak</h3>
+                    <div class="footer-logo">
+                        <img src="logokampus.png" alt="Universitas Aman Sejahtera" />
+                        <img src="logo.png" alt="Dikti Aman Sejahtera" />
+                    </div>
+
+                    <div class="footer-contact">
+                        <p><i class="fa-solid fa-location-dot"></i> Jl. Aman Sentosa No. 123, Bandung, Indonesia 40257
+                        </p>
+                        <p><i class="fa-solid fa-phone"></i> (022) 1234567</p>
+                        <p><i class="fa-solid fa-envelope"></i> info@universitasas.ac.id</p>
+                    </div>
+
+                    <div class="footer-sosmed">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <!-- Bagian Kerjasama -->
+                <div class="footer-section">
+                    <h3>Kerjasama</h3>
+                    <ul>
+                        <li><a href="#">Bagian Kerjasama</a></li>
+                        <li><a href="#">Karier & Alumni</a></li>
+                        <li><a href="#">Kantor Internasional</a></li>
+                    </ul>
+
+                    <h3>Riset & Inovasi</h3>
+                    <ul>
+                        <li><a href="#">Pusat Penelitian & Pengabdian</a></li>
+                        <li><a href="#">Techno Park Aman Sejahtera</a></li>
+                        <li><a href="#">SDG’s Center</a></li>
+                    </ul>
+
+                    <h3>Lainnya</h3>
+                    <ul>
+                        <li><a href="#">Berita Terkini</a></li>
+                        <li><a href="#">Unduh</a></li>
+                        <li><a href="#">Buletin</a></li>
+                        <li><a href="#">Direktori</a></li>
+                    </ul>
+                </div>
+
+                <!-- Bagian Akademik -->
+                <div class="footer-section">
+                    <h3>Akademik</h3>
+                    <ul>
+                        <li><a href="#">Standar Layanan Akademik</a></li>
+                        <li><a href="#">Perpustakaan</a></li>
+                        <li><a href="#">Sistem Akademik</a></li>
+                        <li><a href="#">Pusat Bahasa</a></li>
+                        <li><a href="#">Open CourseWare</a></li>
+                        <li><a href="#">Kampus Aman</a></li>
+                        <li><a href="#">Akreditasi</a></li>
+                        <li><a href="#">myUAS Mobile</a></li>
+                        <li><a href="#">Wisuda</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>© 2025 Universitas Aman Sejahtera | Kampus Aman dan Sejahtera</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- === Tombol Scroll to Top === -->
+    <button id="scrollTopBtn" title="Kembali ke atas">
+        ↑
+    </button>
+
+    <script>
+        const btn = document.getElementById("scrollTopBtn");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 150) {
+                btn.classList.add("show");
+            } else {
+                btn.classList.remove("show");
+            }
+        });
+
+        btn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const navbar = document.querySelector(".navbar");
+            if (window.scrollY > 20) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+
+
+    <!-- Script Counter -->
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        let started = false;
+
+        function countUp() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const duration = 2000;
+                const startTime = performance.now();
+
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const current = Math.floor(progress * target);
+                    counter.textContent = current;
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    } else {
+                        counter.textContent = target;
+                    }
+                }
+
+                requestAnimationFrame(update);
+            });
+        }
+
+        function checkScroll() {
+            const faktaSection = document.querySelector('.fakta');
+            const rect = faktaSection.getBoundingClientRect();
+            if (rect.top < window.innerHeight && !started) {
+                started = true;
+                countUp();
+            }
+        }
+
+        window.addEventListener('scroll', checkScroll);
+    </script>
+
+
+</body>
+
+</html>

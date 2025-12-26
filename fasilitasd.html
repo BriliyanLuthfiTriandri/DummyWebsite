@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fasilitasd.css">
+
+    <title>Fasilitas Disabilitas | Aman Sejahtera Universit</title>
+</head>
+
+<body>
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="container">
+            <ul class="top-menu">
+                <li><a href="direktori.html">Direktori</a></li>
+                <li><a href="bterkini.html">Berita Terkini</a></li>
+                <li><a href="unduh.html">Unduh</a></li>
+                <li><a href="buletin.html">Buletin</a></li>
+                <li><a href="wisuda.html">Wisuda</a></li>
+                <li><a href="akreditasi.html">Akreditasi</a></li>
+                <li><a href="aplikasi.html">Aplikasi AS</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="logokampus.png" alt="Logo Universitas">
+            </div>
+
+            <!-- === Tambahan Mobile Icons (Tidak Mengubah Kode Lama) === -->
+            <div class="mobile-icons">
+                <button class="search-btn-mobile">🔍</button>
+                <div class="hamburger" id="hamburger">☰</div>
+            </div>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li class="dropdown">
+                        <a href="#">Tentang ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="ucapan.html">Ucapan Rektor</a></li>
+                            <li class="sub-dropdown">
+                                <a href="#">Sekilas Tentang ▸</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="sejarah.html">Sejarah Aman Sejahtera</a></li>
+                                    <li><a href="visimisi.html">Visi, Misi dan Tujuan</a></li>
+                                    <li><a href="">Keunggulan</a></li>
+                                    <li><a href="">Berkuliah di AS University</a></li>
+                                    <li><a href="">Keanekaragaman</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Tur Kampus</a></li>
+                            <li><a href="">Struktur Organisasi</a></li>
+                            <li><a href="">Angka</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Akademik ▾</a>
+                        <ul class="dropdown-menu">
+                            <li class="sub-dropdown">
+                                <a href="fteknikelek.html">Fakultas Teknik Elektro ▸</a>
+                                <a href="">Fakultas Ekonomi dan Bisnis ▸</a>
+                                <a href="">Fakultas Hukum ▸</a>
+                                <a href="">Fakultas Ilmu Pemerintahan ▸</a>
+                                <a href="">Fakultas Hubungan International ▸</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="elektro.html">S1 Teknik Elektro</a></li>
+                                    <li><a href="">S1 Teknik Fisika</a></li>
+                                    <li><a href="">S1 Teknik Biomedis</a></li>
+                                    <li><a href="">S1 Teknik Elektromedis</a></li>
+                                    <li><a href="">S1 Teknik Sistem Energi</a></li>
+                                    <li><a href="">S1 Teknik Komputer</a></li>
+                                    <li><a href="">S1 Teknik Telekomunikasi</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Admisi</a></li>
+
+                    <li class="dropdown">
+                        <a href="#">Riset & Inovasi ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Pusat Penelitian</a></li>
+                            <li><a href="#">Inovasi Unggulan</a></li>
+                            <li><a href="#">Entrepreneurial</a></li>
+                            <li><a href="#">Techno Park</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Kehidupan Kampus ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="fasilitasu.html">Fasilitas Unggulan</a></li>
+                            <li><a href="fasilitasd.html">Fasilitas Disabilitas</a></li>
+                            <li><a href="">Kampus Berdampak</a></li>
+                            <li><a href="">Unit Kegiatan Mahasiswa</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">TUNC ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Tentang TUNC</a></li>
+                            <li><a href="#">Program</a></li>
+                            <li><a href="#">Galeri</a></li>
+                            <li><a href="#">Hubungi Kami</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown lang">
+                        <a href="#"><img src="https://flagcdn.com/w20/id.png" alt="ID"> ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><img src="https://flagcdn.com/w20/id.png" alt="ID"> Indonesia</a></li>
+                            <li><a href="#"><img src="https://flagcdn.com/w20/gb.png" alt="EN"> English</a></li>
+                        </ul>
+                    </li>
+
+                    <li><button class="search-btn">🔍</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <script>
+        const burger = document.getElementById("hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        // Toggle nav saat hamburger ditekan
+        burger.addEventListener("click", () => {
+            navMenu.classList.toggle("show");
+        });
+
+        // Dropdown utama
+        document.querySelectorAll('.dropdown > a').forEach(a => {
+            a.addEventListener('click', e => {
+                if (window.innerWidth <= 900) {
+                    e.preventDefault();
+                    a.parentElement.classList.toggle("open");
+                }
+            });
+        });
+
+        // Sub dropdown
+        document.querySelectorAll('.sub-dropdown > a').forEach(a => {
+            a.addEventListener('click', e => {
+                if (window.innerWidth <= 900) {
+                    e.preventDefault();
+                    a.parentElement.classList.toggle("open");
+                }
+            });
+        });
+
+        // Jika ukuran layar dilebarkan, pastikan menu kembali normal
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 900) {
+                navMenu.classList.remove("show");
+
+                document.querySelectorAll(".dropdown.open")
+                    .forEach(d => d.classList.remove("open"));
+
+                document.querySelectorAll(".sub-dropdown.open")
+                    .forEach(s => s.classList.remove("open"));
+            }
+        });
+    </script>
+
+
+
+
+
+    <section class="disabilitas-section fade-up">
+        <div class="disabilitas-content">
+            <div class="disabilitas-left">
+                <img src="pemandangan.png" alt="Fasilitas Disabilitas" class="disabilitas-img">
+            </div>
+            <div class="disabilitas-right">
+                <div class="disabilitas-text-wrapper">
+                    <h2 class="disabilitas-title">Fasilitas Disabilitas</h2>
+                    <p class="disabilitas-text">
+                        Fasilitas Disabilitas Aman Sejahtera University menyediakan akses dan layanan lengkap untuk
+                        mahasiswa
+                        dan civitas akademika dengan kebutuhan khusus. Ruang kelas, asrama, kantin, dan fasilitas umum
+                        dirancang agar inklusif dan ramah bagi penyandang disabilitas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="disabilitas-sistem-section fade-up">
+        <div class="disabilitas-sistem-mini-wrapper">
+            <div class="disabilitas-sistem-line"></div>
+            <div class="disabilitas-sistem-mini-title">AMAN SEJAHTERA UNIVERSITY</div>
+            <div class="disabilitas-sistem-line"></div>
+        </div>
+
+        <h2 class="disabilitas-sistem-title">Dukungan Sistem Pembelajaran Disabilitas</h2>
+
+        <p class="disabilitas-sistem-text">
+            Aman Sejahtera University menyediakan sistem pembelajaran yang inklusif dan ramah disabilitas.
+            Teknologi pendukung, materi belajar digital, serta fasilitas kelas interaktif dirancang untuk memudahkan
+            seluruh mahasiswa, termasuk penyandang disabilitas, agar dapat belajar secara efektif dan nyaman.
+        </p>
+    </section>
+
+
+
+    <section class="akses-section">
+        <div class="akses-container">
+
+            <div class="akses-card">
+                <div class="img-wrap">
+                    <img src="under.png" alt="">
+                </div>
+                <h3>Buddy</h3>
+                <p>
+                    Aman Sejahtera University memiliki komunitas relawan peduli tuna rungu, yang disebut “buddy”.
+                    Berasal dari para mahasiswa yang bertugas sebagai note-taker selama perkuliahan.
+                </p>
+            </div>
+
+            <div class="akses-card">
+                <div class="img-wrap">
+                    <img src="under.png" alt="">
+                </div>
+                <h3>Layanan Konseling</h3>
+                <p>
+                    Aman Sejahtera University memiliki komunitas relawan peduli tuna rungu, yang disebut “buddy”.
+                    Berasal dari para mahasiswa yang bertugas sebagai note-taker selama perkuliahan.
+                </p>
+            </div>
+
+            <div class="akses-card">
+                <div class="img-wrap">
+                    <img src="pemandangan.png" alt="">
+                </div>
+                <h3>Sistem Pembelajaran</h3>
+                <p>
+                    Tidak hanya menyediakan fasilitas fisik, Aman Sejahtera University mengembangkan kurikulum inklusif
+                    dengan menyediakan materi video yang didukung teks terjemahan.
+                </p>
+            </div>
+
+            <div class="akses-card bawah">
+                <div class="img-wrap">
+                    <img src="pemandangan.png" alt="">
+                </div>
+                <h3>Friendly User Interface</h3>
+                <p>
+                    Layanan aplikasi di Aman Sejahtera University dirancang ramah bagi mahasiswa buta warna
+                    sehingga informasi tetap dapat diterima.
+                </p>
+            </div>
+
+            <div class="akses-card bawah">
+                <div class="img-wrap">
+                    <img src="under.png" alt="">
+                </div>
+                <h3>Peta Akses Disabilitas</h3>
+                <p>
+                    Aman Sejahtera University menyediakan fasilitas jalur kursi roda, toilet khusus,
+                    dan area parkir disabilitas.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-container">
+
+                <!-- Bagian Kontak -->
+                <div class="footer-section">
+                    <h3>Kontak</h3>
+                    <div class="footer-logo">
+                        <img src="logokampus.png" alt="Universitas Aman Sejahtera" />
+                        <img src="logo.png" alt="Dikti Aman Sejahtera" />
+                    </div>
+
+                    <div class="footer-contact">
+                        <p><i class="fa-solid fa-location-dot"></i> Jl. Aman Sentosa No. 123, Bandung, Indonesia 40257
+                        </p>
+                        <p><i class="fa-solid fa-phone"></i> (022) 1234567</p>
+                        <p><i class="fa-solid fa-envelope"></i> info@universitasas.ac.id</p>
+                    </div>
+
+                    <div class="footer-sosmed">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <!-- Bagian Kerjasama -->
+                <div class="footer-section">
+                    <h3>Kerjasama</h3>
+                    <ul>
+                        <li><a href="#">Bagian Kerjasama</a></li>
+                        <li><a href="#">Karier & Alumni</a></li>
+                        <li><a href="#">Kantor Internasional</a></li>
+                    </ul>
+
+                    <h3>Riset & Inovasi</h3>
+                    <ul>
+                        <li><a href="#">Pusat Penelitian & Pengabdian</a></li>
+                        <li><a href="#">Techno Park Aman Sejahtera</a></li>
+                        <li><a href="#">SDG’s Center</a></li>
+                    </ul>
+
+                    <h3>Lainnya</h3>
+                    <ul>
+                        <li><a href="#">Berita Terkini</a></li>
+                        <li><a href="#">Unduh</a></li>
+                        <li><a href="#">Buletin</a></li>
+                        <li><a href="#">Direktori</a></li>
+                    </ul>
+                </div>
+
+                <!-- Bagian Akademik -->
+                <div class="footer-section">
+                    <h3>Akademik</h3>
+                    <ul>
+                        <li><a href="#">Standar Layanan Akademik</a></li>
+                        <li><a href="#">Perpustakaan</a></li>
+                        <li><a href="#">Sistem Akademik</a></li>
+                        <li><a href="#">Pusat Bahasa</a></li>
+                        <li><a href="#">Open CourseWare</a></li>
+                        <li><a href="#">Kampus Aman</a></li>
+                        <li><a href="#">Akreditasi</a></li>
+                        <li><a href="#">myUAS Mobile</a></li>
+                        <li><a href="#">Wisuda</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>© 2025 Universitas Aman Sejahtera | Kampus Aman dan Sejahtera</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- === Tombol Scroll to Top === -->
+    <button id="scrollTopBtn" title="Kembali ke atas">
+        ↑
+    </button>
+
+    <script>
+        const btn = document.getElementById("scrollTopBtn");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 150) {
+                btn.classList.add("show");
+            } else {
+                btn.classList.remove("show");
+            }
+        });
+
+        btn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+
+    <!-- Garis scroll -->
+    <script>
+        window.addEventListener("scroll", function () {
+            const navbar = document.querySelector(".navbar");
+            if (window.scrollY > 20) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pendaftaran.css">
+
+    <title>Pendaftaran</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="logokampus.png" alt="Telkom University Logo">
+            </div>
+
+            <!-- HAMBURGER MOBILE -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- NAV MENU -->
+            <nav class="menu">
+                <div class="menu-item"><a href="#">Kampus ▾</a></div>
+                <div class="menu-item"><a href="#">Jurusan</a></div>
+
+                <!-- DROPDOWN SELEKSI -->
+                <div class="dropdown">
+                    <a href="#">Seleksi ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="pendaftaran.html">Petunjuk Pendaftaran</a>
+                        <a href="biayapend.html">Biaya Pendidikan</a>
+                        <a href="beasiswa.html">Beasiswa</a>
+                        <a href="">Foreign Student</a>
+                        <a href="">Jalur Seleksi</a>
+                    </div>
+                </div>
+
+                <!-- DROPDOWN PROGRAM -->
+                <div class="dropdown">
+                    <a href="#">Program ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="#">Sarjana</a>
+                        <a href="#">Pascasarjana</a>
+                        <a href="#">Online Learning</a>
+                        <a href="#">International Class</a>
+                        <a href="#">Double Degree</a>
+                    </div>
+                </div>
+
+                <div class="menu-item"><a href="#">Life at AS-Univ</a></div>
+
+                <!-- Pindahkan tombol ke dalam menu pada mobile -->
+                <div class="mobile-buttons">
+                    <button class="btn-red">Daftar KAS</button>
+                    <button class="btn-pink">Cek Kelulusan</button>
+                </div>
+            </nav>
+
+            <!-- BUTTONS DESKTOP -->
+            <div class="nav-buttons">
+                <button class="btn-red">Daftar KAS</button>
+                <button class="btn-pink">Cek Kelulusan</button>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        // Toggle menu utama
+        function toggleMenu() {
+            document.querySelector(".menu").classList.toggle("menu-open");
+            document.querySelector(".hamburger").classList.toggle("active");
+        }
+
+        // Toggle dropdown di mobile
+        document.querySelectorAll(".dropdown > a").forEach(item => {
+            item.addEventListener("click", function (e) {
+                e.preventDefault(); // cegah link default
+                let parent = item.parentElement;
+                parent.classList.toggle("open");
+            });
+        });
+    </script>
+
+
+    <section class="hero-pendaftaran">
+        <img src="pemandangan.png" alt="Hero Pendaftaran">
+        <div class="hero-content">
+            <h1>Petunjuk Pendaftaran</h1>
+            <div class="hero-line"></div>
+        </div>
+    </section>
+
+
+
+    <!-- SECTION PENDAFTARAN -->
+    <section class="pendaftaran-section">
+        <div class="container-pendaftaran">
+
+            <!-- Tabs (Indonesian / Foreign) -->
+            <div class="tabs">
+                <button class="tab active">Indonesian Student</button>
+                <button class="tab">Foreign Student</button>
+            </div>
+
+            <!-- Judul & list persyaratan -->
+            <h2 class="title-pendaftaran">Persyaratan siswa domestik:</h2>
+
+            <ul class="list-syarat">
+                <li>Berwarganegara Indonesia</li>
+                <li>Lulusan pendidikan SMA/ SMK/ MA atau sederajat</li>
+                <li>Usia maksimal 25 tahun saat melamar program diploma dan sarjana</li>
+            </ul>
+
+            <!-- Timeline -->
+            <div class="timeline-wrapper">
+                <div class="timeline-line"></div>
+                <div class="timeline-progress"></div> <!-- DITAMBAHKAN -->
+
+                <!-- Tahap 1 -->
+                <div class="timeline-step">
+                    <div class="step-number">1</div>
+                    <div class="step-card">
+                        <h3 class="step-title">Tahap 1</h3>
+                        <p class="step-subtitle">Cari Informasi Penerimaan Mahasiswa Baru Aman Sejahtera University</p>
+                        <ul>
+                            <li>Masuk ke Website smb.amansejahtera.ac.id</li>
+                            <li>Klik Daftar SMB atau ketik link amansejahtera.ac.id/daftar-akun-smb</li>
+                        </ul>
+                        <button class="btn-daftar">Daftar Jalur Seleksi</button>
+                    </div>
+                </div>
+
+                <!-- Tahap 2 -->
+                <div class="timeline-step">
+                    <div class="step-number">2</div>
+                    <div class="step-card">
+                        <h3 class="step-title">Tahap 2</h3>
+                        <p class="step-subtitle">Membuat Akun Pendaftaran</p>
+                        <ul>
+                            <li>Isi data diri sesuai dokumen</li>
+                            <li>Verifikasi email/nomor telepon</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tahap 3 -->
+                <div class="timeline-step">
+                    <div <div class="step-number">3</div>
+                    <div class="step-card">
+                        <h3 class="step-title">Tahap 3</h3>
+                        <p class="step-subtitle">Mengisi Formulir dan Upload Dokumen</p>
+                        <ul>
+                            <li>Lengkapi formulir online</li>
+                            <li>Upload ijazah, KTP, pas foto, dan berkas pendukung</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tahap 4 -->
+                <div class="timeline-step">
+                    <div class="step-number">4</div>
+                    <div class="step-card">
+                        <h3 class="step-title">Tahap 4</h3>
+                        <p class="step-subtitle">Pembayaran Biaya Pendaftaran</p>
+                        <ul>
+                            <li>Lakukan pembayaran sesuai instruksi</li>
+                            <li>Simpan bukti pembayaran</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tahap 5 -->
+                <div class="timeline-step">
+                    <div class="step-number">5</div>
+                    <div class="step-card">
+                        <h3 class="step-title">Tahap 5</h3>
+                        <p class="step-subtitle">Pengumuman & Registrasi</p>
+                        <ul>
+                            <li>Tunggu pengumuman seleksi</li>
+                            <li>Jika lulus, ikuti proses registrasi yang disampaikan</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+
+
+
+
+
+    <section class="video-section">
+        <div class="video-container">
+
+            <div class="video-box">
+                <h2>Video Petunjuk Daftar </h2>
+                <div class="video-frame">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="video-box">
+                <h2>Video PIN Pendaftaran</h2>
+                <div class="video-frame">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <footer class="footer-section">
+        <div class="footer-container">
+
+            <!-- Logo + Alamat -->
+            <div class="footer-col footer-left">
+                <img src="logokampus.png" alt="Aman Sejahtera University" class="footer-logo">
+
+                <h3 class="footer-title">Alamat</h3>
+                <p class="footer-text">
+                    Aman Sejahtera University<br>
+                    Ruang Layanan Admisi,<br>
+                    Grha Cacuk Wiyata, Gedung A<br>
+                    Jl. Pendidikan Sejahtera No. 1 Indonesia, 40257
+                </p>
+            </div>
+
+            <!-- FAQ -->
+            <div class="footer-col">
+                <h3 class="footer-head">FAQ</h3>
+                <ul class="footer-list">
+                    <li>Umum</li>
+                    <li>Persyaratan Pendaftaran</li>
+                    <li>Jalur Seleksi</li>
+                    <li>Ujian</li>
+                    <li>Pengumuman</li>
+                    <li>Registrasi</li>
+                    <li>Beasiswa</li>
+                </ul>
+            </div>
+
+            <!-- Artikel -->
+            <div class="footer-col">
+                <h3 class="footer-head">Artikel</h3>
+                <ul class="footer-list">
+                    <li>Tren Kampus</li>
+                    <li>Fakta Jurusan</li>
+                    <li>Kisah Sukses</li>
+                    <li>Tips dan Trik</li>
+                </ul>
+            </div>
+
+            <!-- Pertanyaan -->
+            <div class="footer-col footer-right">
+                <h2 class="footer-ask">Ada<br>Pertanyaan?</h2>
+                <p class="footer-desc">
+                    Hubungi kami sekarang, jika ada<br>
+                    pertanyaan lebih lanjut.
+                </p>
+                <button class="footer-button">Kontak Kami</button>
+            </div>
+
+        </div>
+
+        <p class="footer-copy">Copyright ©2025 All Rights Reserved By Aman Sejahtera University</p>
+    </footer>
+
+
+
+
+    <script>
+        document.addEventListener("scroll", () => {
+            const steps = document.querySelectorAll(".timeline-step");
+            const progress = document.querySelector(".timeline-progress");
+
+            let progressHeight = 0;
+
+            steps.forEach((step) => {
+                const rect = step.getBoundingClientRect();
+                const triggerPoint = window.innerHeight * 0.55;
+
+                if (rect.top < triggerPoint) {
+                    step.classList.add("active");
+                    progressHeight = step.offsetTop + rect.height / 2;
+                } else {
+                    step.classList.remove("active");
+                }
+            });
+
+            progress.style.height = progressHeight + "px";
+        });
+    </script>
+
+    <script>
+        const cards = document.querySelectorAll(".step-card");
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+
+                    cards.forEach((card, index) => {
+                        setTimeout(() => {
+                            card.classList.add("show");
+                        }, index * 200);
+                    });
+
+                    observer.disconnect();
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        observer.observe(cards[0]);
+    </script>
+
+
+
+</body>
+
+</html>

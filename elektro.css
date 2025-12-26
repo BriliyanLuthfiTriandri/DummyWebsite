@@ -1,0 +1,704 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 5px 0;
+}
+
+/* TOPBAR */
+.topbar {
+    width: 100%;
+    background: #c1c1c1;
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
+}
+
+.topbar-inner {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.topbar-inner li {
+    list-style: none;
+    color: white;
+    font-size: 15px;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Garis pembatas topbar */
+.topbar-inner li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 1px;
+    height: 18px;
+    background: #ffffff66;
+    transform: translateY(-50%);
+}
+
+.search {
+    margin-left: auto;
+}
+
+/* NAVBAR */
+.navbar-telu {
+    width: 100%;
+    background: #000000;
+    padding: 25px 0;
+}
+
+.nav-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-head {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 110px;
+    margin: 0;
+}
+
+/* MENU NAVBAR */
+.nav-menu {
+    margin-top: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    /* rapikan jarak */
+}
+
+.nav-menu li {
+    color: white;
+    font-size: 15px;
+    /* sesuai permintaan */
+    font-weight: 400;
+    padding: 0 18px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Garis pembatas NAVBAR */
+.nav-menu li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 1px;
+    height: 18px;
+    background: #ffffff55;
+    transform: translateY(-50%);
+}
+
+
+
+
+/* PAGE HEADER SECTION */
+.page-header {
+    width: 100%;
+    background: #e9e9e9;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+}
+
+.page-header-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.page-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-title {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.breadcrumb {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+
+/* CONTENT WRAPPER */
+.content-wrapper {
+    width: 1200px;
+    margin: 40px auto;
+    display: flex;
+    gap: 30px;
+    font-family: Arial, sans-serif;
+}
+
+/* AREA KONTEN KIRI */
+.content-left {
+    width: 65%;
+    padding: 25px 30px;
+    line-height: 1.75;
+    font-size: 16px;
+}
+
+.main-article-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* JUDUL & HEADING */
+.article-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.content-left h3 {
+    font-size: 23px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.content-left h4 {
+    font-size: 19px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* PARAGRAF */
+.article-text {
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+/* LIST */
+.content-left ul,
+.content-left ol {
+    margin-left: 25px;
+    margin-bottom: 20px;
+}
+
+.content-left li {
+    margin-bottom: 7px;
+}
+
+/* KOTAK RUMUS */
+.rumus-box {
+    background: #f4f4f4;
+    padding: 15px 20px;
+    border-left: 4px solid #0077ff;
+    border-radius: 8px;
+    margin: 15px 0;
+    font-family: Consolas, monospace;
+}
+
+/* BAGIAN SUMBER */
+.credit {
+    font-size: 14px;
+    color: #555;
+    margin-top: 30px;
+    line-height: 1.6;
+}
+
+
+/* SIDEBAR */
+.sidebar {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* JUDUL EVENT LIST */
+.sidebar-title {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* AGAR EFEK + BISA MUNCUL */
+.sidebar-box {
+    position: relative;
+}
+
+/* GAMBAR EVENT */
+.sidebar-box img {
+    width: 100%;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    position: relative;
+    z-index: 1;
+    /* DITAMBAHKAN — supaya garis + bisa muncul di atas */
+}
+
+/* HOVER ZOOM + DARK */
+.sidebar-box:hover img {
+    transform: scale(1.03);
+    filter: brightness(0.85);
+}
+
+/* TEKS DIBAWAH GAMBAR BISA DIKLIK */
+.side-caption {
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* TANDA + TIPIS (2 GARIS KECIL) */
+.sidebar-box::before,
+.sidebar-box::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: white;
+    opacity: 0;
+    transition: 0.3s ease;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.sidebar-box::before {
+    width: 25px;
+    height: 1px;
+    transform: translate(-50%, -50%) scaleX(0);
+}
+
+.sidebar-box::after {
+    width: 1px;
+    height: 25px;
+    transform: translate(-50%, -50%) scaleY(0);
+}
+
+.sidebar-box:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scaleX(1);
+}
+
+.sidebar-box:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scaleY(1);
+}
+
+
+/* AUTHOR SECTION */
+
+.author-section {
+    padding: 40px 0;
+    border-top: 1px solid #e5e5e5;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.author-container {
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    /* LINE mengikuti 1200px */
+    margin: auto;
+    gap: 20px;
+}
+
+.author-photo {
+    width: 70px;
+    height: 70px;
+    background: #ddd;
+    border-radius: 50%;
+}
+
+.author-name {
+    font-size: 20px;
+    margin: 0;
+}
+
+.author-text {
+    color: #666;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+/* PREV / NEXT NAVIGATION */
+
+.nav-section {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 40px auto;
+    border: 1px solid #e5e5e5;
+}
+
+.nav-item {
+    width: 50%;
+    padding: 25px;
+    text-decoration: none;
+    color: #000;
+    transition: background 0.15s linear;
+    /* HANYA warna */
+}
+
+.nav-prev {
+    border-right: 1px solid #e5e5e5;
+}
+
+/* HOVER hanya warna */
+.nav-item:hover {
+    background: #f2f2f2;
+}
+
+.nav-label {
+    font-size: 13px;
+    color: #777;
+}
+
+.nav-title {
+    font-size: 16px;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+/* FOOTER INFO (TIDAK GANGGU FOOTER UTAMA) */
+
+.footer-info-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.footer-info {
+    width: 1200px;
+    padding-bottom: 50px;
+}
+
+.footer-col {
+    width: 100%;
+}
+
+.footer-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-list li {
+    list-style: none;
+    margin-bottom: 6px;
+}
+
+
+
+
+/* FOOTER UTAMA */
+.footer {
+    width: 100%;
+    background: #000000;
+    color: white;
+    padding: 60px 0;
+}
+
+.footer-container {
+    width: 1200px;
+    margin: auto;
+}
+
+.footer-logo img {
+    height: 150px;
+    margin-bottom: 0;
+    object-fit: contain;
+}
+
+
+/* Layout kiri - kanan */
+.footer-layout {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-left {
+    width: 35%;
+    margin-top: 200px;
+    margin-bottom: -150px;
+}
+
+/* kanan = 3 kolom link */
+.footer-columns {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.footer-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.footer-list li,
+.footer-col ul li {
+    list-style: none;
+    opacity: 0.85;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+/* ACADEMIC dinaikkan sedikit */
+.footer-academic {
+    width: 20%;
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+/* garis tipis */
+.footer-line {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.25);
+    margin: 40px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-social a {
+    width: 28px;
+    height: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.top-divider {
+    margin-top: 30px;
+    width: 100%;
+    height: 1px;
+    background: #717171;
+    position: relative;
+}
+
+.top-divider span {
+    background: #000000;
+    padding: 5px 15px;
+    font-size: 13px;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 10;
+    pointer-events: auto;
+}
+
+
+
+/* RESPONSIVE  */
+
+
+/* =============================== */
+/* === MOBILE FIX TAMBAHAN ONLY === */
+/* =============================== */
+
+@media (max-width: 768px) {
+
+    /* ===== GLOBAL WIDTH FIX ===== */
+    .topbar-inner,
+    .nav-container,
+    .page-header-container,
+    .content-wrapper,
+    .author-container,
+    .nav-section,
+    .footer-info,
+    .footer-container {
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* ===== TOPBAR ===== */
+    .topbar-inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .topbar-inner li {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+
+    .topbar-inner li::after {
+        display: none;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar-telu {
+        padding: 15px 0;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .nav-menu li {
+        padding: 0 10px;
+        font-size: 14px;
+    }
+
+    .nav-menu li::after {
+        display: none;
+    }
+
+    .logo {
+        display: block;
+        margin: auto;
+    }
+
+    /* ===== PAGE HEADER ===== */
+    .page-header-row {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .page-title {
+        font-size: 20px;
+    }
+
+    /* ===== CONTENT LAYOUT ===== */
+    .content-wrapper {
+        flex-direction: column;
+        gap: 40px;
+        margin: 20px auto;
+    }
+
+    .content-left,
+    .sidebar {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* ===== ARTICLE ===== */
+    .article-title {
+        font-size: 24px;
+    }
+
+    .content-left h3 {
+        font-size: 20px;
+    }
+
+    .content-left h4 {
+        font-size: 17px;
+    }
+
+    .article-text {
+        font-size: 15px;
+    }
+
+    /* ===== SIDEBAR ===== */
+    .sidebar-title {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .sidebar-box img {
+        border-radius: 8px;
+    }
+
+    /* ===== AUTHOR ===== */
+    .author-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* ===== PREV / NEXT ===== */
+    .nav-section {
+        flex-direction: column;
+    }
+
+    .nav-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-prev {
+        border-right: none;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    /* ===== FOOTER INFO ===== */
+    .footer-info {
+        text-align: center;
+    }
+
+    /* ===== FOOTER UTAMA ===== */
+    .footer-layout {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .footer-left {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .footer-columns {
+        width: 100%;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-academic {
+        width: 100%;
+        margin: 30px auto 0;
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}

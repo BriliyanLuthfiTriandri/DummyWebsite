@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="beasiswa.css">
+
+    <title>Beasiswa | Aman Sejahtera Universitas</title>
+</head>
+
+<body>
+
+
+
+    <header class="navbar">
+        <div class="nav-container">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="logokampus.png" alt="Telkom University Logo">
+            </div>
+
+            <!-- HAMBURGER MOBILE -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- NAV MENU -->
+            <nav class="menu">
+                <div class="menu-item"><a href="#">Kampus ▾</a></div>
+                <div class="menu-item"><a href="#">Jurusan</a></div>
+
+                <!-- DROPDOWN SELEKSI -->
+                <div class="dropdown">
+                    <a href="#">Seleksi ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="pendaftaran.html">Petunjuk Pendaftaran</a>
+                        <a href="biayapend.html">Biaya Pendidikan</a>
+                        <a href="beasiswa.html">Beasiswa</a>
+                        <a href="">Foreign Student</a>
+                        <a href="">Jalur Seleksi</a>
+                    </div>
+                </div>
+
+                <!-- DROPDOWN PROGRAM -->
+                <div class="dropdown">
+                    <a href="#">Program ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="#">Sarjana</a>
+                        <a href="#">Pascasarjana</a>
+                        <a href="#">Online Learning</a>
+                        <a href="#">International Class</a>
+                        <a href="#">Double Degree</a>
+                    </div>
+                </div>
+
+                <div class="menu-item"><a href="#">Life at AS-Univ</a></div>
+
+                <!-- Pindahkan tombol ke dalam menu pada mobile -->
+                <div class="mobile-buttons">
+                    <button class="btn-red">Daftar KAS</button>
+                    <button class="btn-pink">Cek Kelulusan</button>
+                </div>
+            </nav>
+
+            <!-- BUTTONS DESKTOP -->
+            <div class="nav-buttons">
+                <button class="btn-red">Daftar KAS</button>
+                <button class="btn-pink">Cek Kelulusan</button>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        // Toggle menu utama
+        function toggleMenu() {
+            document.querySelector(".menu").classList.toggle("menu-open");
+            document.querySelector(".hamburger").classList.toggle("active");
+        }
+
+        // Toggle dropdown di mobile
+        document.querySelectorAll(".dropdown > a").forEach(item => {
+            item.addEventListener("click", function (e) {
+                e.preventDefault(); // cegah link default
+                let parent = item.parentElement;
+                parent.classList.toggle("open");
+            });
+        });
+    </script>
+
+
+    <section class="hero-beasiswa">
+        <img src="pemandangan.png" alt="Hero Beasiswa">
+        <div class="hero-content">
+            <h1>Beasiswa</h1>
+            <div class="hero-line"></div>
+        </div>
+    </section>
+
+
+    <section class="beasiswa-info">
+        <div class="beasiswa-wrapper">
+
+            <div class="beasiswa-img">
+                <img src="orangno.png" alt="Beasiswa Image">
+            </div>
+
+            <div class="beasiswa-text">
+                <h2>Aman Sejahtera University menyediakan beasiswa bagi calon mahasiswa</h2>
+
+                <p>Beasiswa yang disediakan dibagi dalam dua skema, antara lain:</p>
+
+                <ul>
+                    <li><b>Beasiswa Unggulan</b> yaitu kategori beasiswa yang memberikan <b>Gratis 100% Biaya
+                            Pendidikan</b> sampai lulus*.</li>
+                    <li><b>Beasiswa Pintar</b> yaitu kategori beasiswa berupa <b>potongan sebagian</b> biaya pendidikan
+                        seperti UP3, SDP2, atau BPP semester 1*.</li>
+                </ul>
+
+                <p>
+                    Untuk mendapatkan beasiswa tersebut, calon mahasiswa harus mendaftar terlebih dahulu melalui jalur
+                    seleksi yang sedang dibuka.
+                    Informasi Jalur Seleksi Khusus Beasiswa yang sedang dibuka, cari tahu disini!
+                </p>
+
+                <a href="#" class="btn-red-beasiswa">Selengkapnya</a>
+
+                <div class="note">*syarat & ketentuan berlaku</div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <footer class="footer-section">
+        <div class="footer-container">
+
+            <!-- Logo + Alamat -->
+            <div class="footer-col footer-left">
+                <img src="logokampus.png" alt="Aman Sejahtera University" class="footer-logo">
+
+                <h3 class="footer-title">Alamat</h3>
+                <p class="footer-text">
+                    Aman Sejahtera University<br>
+                    Ruang Layanan Admisi,<br>
+                    Grha Cacuk Wiyata, Gedung A<br>
+                    Jl. Pendidikan Sejahtera No. 1 Indonesia, 40257
+                </p>
+            </div>
+
+            <!-- FAQ -->
+            <div class="footer-col">
+                <h3 class="footer-head">FAQ</h3>
+                <ul class="footer-list">
+                    <li>Umum</li>
+                    <li>Persyaratan Pendaftaran</li>
+                    <li>Jalur Seleksi</li>
+                    <li>Ujian</li>
+                    <li>Pengumuman</li>
+                    <li>Registrasi</li>
+                    <li>Beasiswa</li>
+                </ul>
+            </div>
+
+            <!-- Artikel -->
+            <div class="footer-col">
+                <h3 class="footer-head">Artikel</h3>
+                <ul class="footer-list">
+                    <li>Tren Kampus</li>
+                    <li>Fakta Jurusan</li>
+                    <li>Kisah Sukses</li>
+                    <li>Tips dan Trik</li>
+                </ul>
+            </div>
+
+            <!-- Pertanyaan -->
+            <div class="footer-col footer-right">
+                <h2 class="footer-ask">Ada<br>Pertanyaan?</h2>
+                <p class="footer-desc">
+                    Hubungi kami sekarang, jika ada<br>
+                    pertanyaan lebih lanjut.
+                </p>
+                <button class="footer-button">Kontak Kami</button>
+            </div>
+
+        </div>
+
+        <p class="footer-copy">Copyright ©2025 All Rights Reserved By Aman Sejahtera University</p>
+    </footer>
+
+
+
+
+</body>
+
+</html>

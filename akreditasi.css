@@ -1,0 +1,873 @@
+/* Global */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #222;
+}
+
+/* Topbar */
+.topbar {
+    background-color: #000000;
+    color: white;
+    font-size: 14px;
+}
+
+.topbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 16px;
+}
+
+.top-menu {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.top-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.top-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: border-bottom 0.3s ease;
+    border-bottom: 0 solid transparent;
+}
+
+.navbar.scrolled {
+    border-bottom: 3px solid #000000;
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.logo img {
+    height: 120px;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav-menu a:hover {
+    color: #5f5e5e;
+}
+
+.lang,
+.search-btn {
+    margin-left: 16px;
+}
+
+.lang img {
+    width: 24px;
+    height: auto;
+    vertical-align: middle;
+    border-radius: 2px;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #6f6f6f;
+}
+
+.search-btn:hover {
+    color: #808080;
+}
+
+/* Navbar Responsive */
+@media (max-width: 900px) {
+    .nav-content {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .logo img {
+        position: static;
+        transform: none;
+        height: 80px;
+        margin-bottom: 8px;
+    }
+}
+
+
+#scrollTopBtn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Saat muncul */
+#scrollTopBtn.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* Efek hover */
+#scrollTopBtn:hover {
+    background-color: #222;
+}
+
+/* === DROPDOWN MENU === */
+.nav-menu li {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    display: none;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background: #f2f2f2;
+}
+
+/* Tampilkan saat hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Untuk menu bahasa (flag) */
+.dropdown.lang .dropdown-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+
+/* Footer */
+.footer {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Bagian atas (putih) */
+.footer-top {
+    background-color: #fff;
+    color: #000;
+    padding: 150px 0 100px;
+    position: relative;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+    top: -120px;
+}
+
+.footer-section {
+    text-align: left;
+}
+
+/* Heading */
+.footer-section h3 {
+    font-weight: 500;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+/* Paragraf */
+.footer-section p {
+    margin: 4px 0;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+/* Daftar */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px;
+}
+
+.footer-section ul li {
+    margin-bottom: 6px;
+}
+
+.footer-section ul li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #000000;
+}
+
+/* Logo */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.footer-logo img {
+    height: 100px;
+}
+
+/* Sosial Media */
+.footer-sosmed a {
+    color: #000;
+    font-size: 18px;
+    margin-right: 10px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.footer-sosmed a:hover {
+    transform: scale(1.2);
+    color: #4a4848;
+}
+
+/* Bagian bawah hitam */
+.footer-bottom {
+    background-color: #000;
+    color: #fff;
+    font-size: 13px;
+    padding: 15px 0;
+}
+
+.footer-bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 20px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+        top: 0;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    .footer-sosmed {
+        justify-content: center;
+    }
+
+    .footer-bottom-container {
+        text-align: center;
+        padding: 0 10px;
+    }
+}
+
+
+
+/* === DROPDOWN MENU === */
+.nav-menu li {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    display: none;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    background: #f2f2f2;
+}
+
+/* Tampilkan saat hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Untuk menu bahasa (flag) */
+.dropdown.lang .dropdown-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Dropdown utama */
+.navbar ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 10px 0;
+    min-width: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.navbar ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* SUBMENU (Sekilas Tentang) */
+.sub-dropdown {
+    position: relative;
+}
+
+.sub-dropdown-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: white;
+    padding: 10px 0;
+    min-width: 180px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Muncul hanya ketika hover pada Sekilas Tentang */
+.sub-dropdown:hover .sub-dropdown-content {
+    display: block;
+}
+
+/* Style item submenu */
+.dropdown-content li,
+.sub-dropdown-content li {
+    padding: 8px 15px;
+    list-style: none;
+}
+
+.dropdown-content li a,
+.sub-dropdown-content li a {
+    text-decoration: none;
+    color: #0f172a;
+    display: block;
+}
+
+.dropdown-content li:hover,
+.sub-dropdown-content li:hover {
+    background: #f1f5f9;
+}
+
+
+/*  Section Akreditasi  */
+.akreditasi-section {
+    background-color: #fff;
+    padding: 10px 0 120px;
+    font-family: 'Inter', sans-serif;
+}
+
+.akreditasi-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.akreditasi-container p {
+    margin-bottom: 30px;
+}
+
+/* Bagian angka statistik */
+.akreditasi-stats {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 300px;
+    margin-top: 40px;
+    margin-left: 2px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
+
+/* Angka */
+.stat-item h2.counter {
+    font-size: 50px;
+    font-weight: 500;
+    margin: 0;
+    color: #000000;
+    line-height: 1;
+    min-width: 3.5ch;
+}
+
+.stat-item p {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    color: #000000;
+    line-height: 1.2;
+    position: relative;
+    left: -40px;
+}
+
+@media (max-width: 900px) {
+    .akreditasi-stats {
+        flex-direction: column;
+        gap: 25px;
+        margin-left: 0;
+    }
+
+    .stat-item {
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .stat-item h2.counter {
+        font-size: 40px;
+    }
+
+    .stat-item:nth-child(2) h2.counter {
+        font-size: 36px;
+    }
+
+    .stat-item p {
+        font-size: 16px;
+    }
+}
+
+
+/* === DROPDOWN AKREDITASI DETAIL === */
+.akreditasi-detail-section {
+    max-width: 1200px;
+    margin: -100px auto 120px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Tombol + judul dropdown */
+.akreditasi-dropdown .dropdown-toggle {
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 20px;
+    padding: 18px 0;
+    cursor: pointer;
+    color: #333;
+    font-weight: 500;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.akreditasi-dropdown .dropdown-toggle .icon {
+    font-size: 26px;
+    font-weight: bold;
+    color: #005bbb;
+}
+
+/* Isi tabel */
+.akreditasi-dropdown .dropdown-content {
+    display: none;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-left: 30px;
+    overflow: hidden;
+}
+
+.akreditasi-dropdown table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.akreditasi-dropdown table th {
+    background-color: #f7f7f7;
+    padding: 14px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.akreditasi-dropdown table td {
+    padding: 14px;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.akreditasi-dropdown table a {
+    color: rgb(102, 102, 102);
+    text-decoration: none;
+}
+
+.akreditasi-dropdown table a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .akreditasi-dropdown table td {
+        text-align: left;
+    }
+}
+
+.icon-circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background: #000000;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+/* mobile */
+
+
+
+/* Sembunyikan hamburger & search mobile saat desktop */
+.mobile-icons {
+    display: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    /* Logo kiri – tetap */
+    .logo {
+        display: flex;
+        align-items: center;
+        z-index: 1001;
+    }
+
+    /* Tampilkan hamburger & search */
+    .mobile-icons {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-left: auto;
+        z-index: 1001;
+    }
+
+    .mobile-icons button,
+    .mobile-icons .hamburger {
+        font-size: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Sembunyikan menu utama */
+    nav .nav-menu {
+        display: none;
+        flex-direction: column;
+        background: white;
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 15px 0;
+        border-top: 1px solid #ddd;
+        z-index: 999;
+    }
+
+    /* Dropdown agar jatuh ke bawah, tidak menutupi hamburger */
+    nav .nav-menu.show {
+        display: flex;
+    }
+
+    /* Dropdown item mobile */
+    nav .nav-menu li {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    nav .nav-menu li a {
+        width: 100%;
+        display: block;
+    }
+
+    /* Dropdown utama mobile */
+    .dropdown-content,
+    .dropdown-menu {
+        position: static;
+        background: #f8f8f8;
+        box-shadow: none;
+        border-left: 3px solid #ddd;
+        padding-left: 10px;
+        display: none;
+    }
+
+    /* Saat dropdown dibuka */
+    .dropdown.open>.dropdown-content,
+    .dropdown.open>.dropdown-menu {
+        display: block;
+    }
+
+    /* Sub dropdown */
+    .sub-dropdown-content {
+        position: static;
+        background: #eee;
+        border-left: 3px solid #ccc;
+        display: none;
+        padding-left: 10px;
+    }
+
+    .sub-dropdown.open>.sub-dropdown-content {
+        display: block;
+    }
+}
+
+/* === FIX AGAR LOGO KIRI & ICON KANAN SEJAJAR === */
+@media (max-width: 768px) {
+
+    /* Bungkus utama dalam navbar agar jadi baris */
+    .navbar .nav-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* Pastikan logo tidak terdorong */
+    .navbar .logo {
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Pastikan icon di kanan */
+    .navbar .mobile-icons {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* Hamburger & search lebih besar */
+    .navbar .mobile-icons button,
+    .navbar .mobile-icons .hamburger {
+        font-size: 26px;
+        padding: 5px;
+    }
+
+    /* Hilangkan search desktop */
+    .navbar .search-btn {
+        display: none;
+    }
+}
+
+
+
+
+
+/* ========================= */
+/* === MOBILE FIX TAMBAHAN === */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    /* Rapikan container utama */
+    .akreditasi-container,
+    .akreditasi-detail-section {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* Statistik agar tidak bertabrakan */
+    .akreditasi-stats {
+        gap: 20px;
+    }
+
+    .stat-item {
+        gap: 12px;
+    }
+
+    .stat-item p {
+        left: 0;
+        /* hilangkan geser aneh di mobile */
+    }
+
+    /* Dropdown akreditasi */
+    .akreditasi-dropdown .dropdown-toggle {
+        font-size: 16px;
+        padding: 14px 0;
+    }
+
+    .akreditasi-dropdown .dropdown-content {
+        margin-left: 0;
+    }
+
+    /* === TABEL RESPONSIVE TANPA UBAH HTML === */
+    .akreditasi-dropdown table,
+    .akreditasi-dropdown thead,
+    .akreditasi-dropdown tbody,
+    .akreditasi-dropdown th,
+    .akreditasi-dropdown td,
+    .akreditasi-dropdown tr {
+        display: block;
+        width: 100%;
+    }
+
+    /* Sembunyikan header tabel */
+    .akreditasi-dropdown thead {
+        display: none;
+    }
+
+    /* Baris jadi card */
+    .akreditasi-dropdown tr {
+        border-bottom: 1px solid #ddd;
+        padding: 12px 0;
+    }
+
+    .akreditasi-dropdown td {
+        text-align: left;
+        padding: 6px 0;
+        border: none;
+        font-size: 14px;
+    }
+
+    /* Label otomatis dari kolom */
+    .akreditasi-dropdown td:nth-child(1)::before {
+        content: "Program / Institusi: ";
+        font-weight: 600;
+    }
+
+    .akreditasi-dropdown td:nth-child(2)::before {
+        content: "Akreditasi: ";
+        font-weight: 600;
+    }
+
+    .akreditasi-dropdown td:nth-child(3)::before {
+        content: "Sertifikat: ";
+        font-weight: 600;
+    }
+
+    .akreditasi-dropdown td:nth-child(4)::before {
+        content: "Nomor SK: ";
+        font-weight: 600;
+    }
+
+    .akreditasi-dropdown td:nth-child(5)::before {
+        content: "Masa Berlaku: ";
+        font-weight: 600;
+    }
+
+    /* Footer lebih rapi */
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-section ul {
+        padding: 0;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 8px;
+    }
+}

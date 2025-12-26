@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakultas Elektro | Aman Sejahtera Universitas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="fteknikelek.css">
+</head>
+
+<body>
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="container">
+            <ul class="top-menu">
+                <li><a href="direktori.html">Direktori</a></li>
+                <li><a href="bterkini.html">Berita Terkini</a></li>
+                <li><a href="unduh.html">Unduh</a></li>
+                <li><a href="buletin.html">Buletin</a></li>
+                <li><a href="wisuda.html">Wisuda</a></li>
+                <li><a href="akreditasi.html">Akreditasi</a></li>
+                <li><a href="aplikasi.html">Aplikasi AS</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="logokampus.png" alt="Logo Universitas">
+            </div>
+
+            <!-- === Tambahan Mobile Icons (Tidak Mengubah Kode Lama) === -->
+            <div class="mobile-icons">
+                <button class="search-btn-mobile">🔍</button>
+                <div class="hamburger" id="hamburger">☰</div>
+            </div>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li class="dropdown">
+                        <a href="#">Tentang ▾</a>
+                        <ul class="dropdown-content">
+                            <li><a href="ucapan.html">Ucapan Rektor</a></li>
+                            <li class="sub-dropdown">
+                                <a href="#">Sekilas Tentang ▸</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="sejarah.html">Sejarah Aman Sejahtera</a></li>
+                                    <li><a href="visimisi.html">Visi, Misi dan Tujuan</a></li>
+                                    <li><a href="">Keunggulan</a></li>
+                                    <li><a href="">Berkuliah di AS University</a></li>
+                                    <li><a href="">Keanekaragaman</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Tur Kampus</a></li>
+                            <li><a href="">Struktur Organisasi</a></li>
+                            <li><a href="">Angka</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Akademik ▾</a>
+                        <ul class="dropdown-menu">
+                            <li class="sub-dropdown">
+                                <a href="fteknikelek.html">Fakultas Teknik Elektro ▸</a>
+                                <a href="">Fakultas Ekonomi dan Bisnis ▸</a>
+                                <a href="">Fakultas Hukum ▸</a>
+                                <a href="">Fakultas Ilmu Pemerintahan ▸</a>
+                                <a href="">Fakultas Hubungan International ▸</a>
+                                <ul class="sub-dropdown-content">
+                                    <li><a href="elektro.html">S1 Teknik Elektro</a></li>
+                                    <li><a href="">S1 Teknik Fisika</a></li>
+                                    <li><a href="">S1 Teknik Biomedis</a></li>
+                                    <li><a href="">S1 Teknik Elektromedis</a></li>
+                                    <li><a href="">S1 Teknik Sistem Energi</a></li>
+                                    <li><a href="">S1 Teknik Komputer</a></li>
+                                    <li><a href="">S1 Teknik Telekomunikasi</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">Admisi</a></li>
+
+                    <li class="dropdown">
+                        <a href="#">Riset & Inovasi ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Pusat Penelitian</a></li>
+                            <li><a href="#">Inovasi Unggulan</a></li>
+                            <li><a href="#">Entrepreneurial</a></li>
+                            <li><a href="#">Techno Park</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">Kehidupan Kampus ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="fasilitasu.html">Fasilitas Unggulan</a></li>
+                            <li><a href="fasilitasd.html">Fasilitas Disabilitas</a></li>
+                            <li><a href="">Kampus Berdampak</a></li>
+                            <li><a href="">Unit Kegiatan Mahasiswa</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#">TUNC ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Tentang TUNC</a></li>
+                            <li><a href="#">Program</a></li>
+                            <li><a href="#">Galeri</a></li>
+                            <li><a href="#">Hubungi Kami</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown lang">
+                        <a href="#"><img src="https://flagcdn.com/w20/id.png" alt="ID"> ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><img src="https://flagcdn.com/w20/id.png" alt="ID"> Indonesia</a></li>
+                            <li><a href="#"><img src="https://flagcdn.com/w20/gb.png" alt="EN"> English</a></li>
+                        </ul>
+                    </li>
+
+                    <li><button class="search-btn">🔍</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+
+    <script>
+        const burger = document.getElementById("hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        // Toggle nav saat hamburger ditekan
+        burger.addEventListener("click", () => {
+            navMenu.classList.toggle("show");
+        });
+
+        // Dropdown utama
+        document.querySelectorAll('.dropdown > a').forEach(a => {
+            a.addEventListener('click', e => {
+                if (window.innerWidth <= 900) {
+                    e.preventDefault();
+                    a.parentElement.classList.toggle("open");
+                }
+            });
+        });
+
+        // Sub dropdown
+        document.querySelectorAll('.sub-dropdown > a').forEach(a => {
+            a.addEventListener('click', e => {
+                if (window.innerWidth <= 900) {
+                    e.preventDefault();
+                    a.parentElement.classList.toggle("open");
+                }
+            });
+        });
+
+        // Jika ukuran layar dilebarkan, pastikan menu kembali normal
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 900) {
+                navMenu.classList.remove("show");
+
+                document.querySelectorAll(".dropdown.open")
+                    .forEach(d => d.classList.remove("open"));
+
+                document.querySelectorAll(".sub-dropdown.open")
+                    .forEach(s => s.classList.remove("open"));
+            }
+        });
+    </script>
+
+
+
+
+    <section class="hero-elektro">
+        <div class="hero-elektro-content">
+            <h1>Fakultas<br>Teknik Elektro</h1>
+            <p>School of Electrical Engineering</p>
+        </div>
+    </section>
+
+
+
+    <!-- SEKILAS -->
+    <section class="section-sekilas">
+        <div class="sekilas-container">
+
+            <!-- KIRI: TEKS -->
+            <div class="sekilas-text reveal-left">
+                <h4 class="sekilas-label">FAKULTAS TEKNIK ELEKTRO</h4>
+                <h2 class="sekilas-title">Sekilas Tentang <span>Fakultas</span></h2>
+
+                <p>
+                    Fakultas Teknik Elektro (FTE) merupakan fakultas terbesar dan tertua di Telkom University yang
+                    memiliki komitmen
+                    untuk terus mengembangkan penelitian, pendidikan, dan enterpreneurship dalam bidang teknik elektro
+                    dan teknik fisika,
+                    berbasis teknologi informasi sehingga dapat menjadi fakultas berstandar internasional.
+                    <br><br>
+                    Beberapa program studi telah terakreditasi internasional oleh IABEE dan terakreditasi Unggul oleh
+                    BAN-PT.
+                </p>
+            </div>
+
+            <!-- KANAN: FOTO -->
+            <div class="sekilas-image-single reveal-right">
+                <img src="beasiswa.png" alt="sekilas fakultas">
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- PROSPEK -->
+    <section class="section-prospek">
+        <div class="prospek-container">
+
+            <!-- FOTO -->
+            <div class="prospek-images reveal-left">
+                <img src="beasiswa.png" alt="">
+            </div>
+
+            <!-- TEKS -->
+            <div class="prospek-content reveal-right">
+                <p class="prospek-subtitle">FAKULTAS TEKNIK ELEKTRO</p>
+                <h2 class="prospek-title">Prospek <span>Karir</span></h2>
+
+                <ul class="prospek-list">
+                    <li>① Telecommunication Engineer</li>
+                    <li>② IoT Engineer</li>
+                    <li>③ Electrical Engineer</li>
+                    <li>④ Research & Development Engineer</li>
+                    <li>⑤ Computer Technician</li>
+                    <li>⑥ Biomedical Researcher</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <!-- VISI MISI SECTION -->
+    <section class="vm-section">
+        <div class="vm-container">
+
+            <h2 class="vm-title reveal-up">Visi</h2>
+            <p class="vm-visi-text reveal-up">
+                Menjadi fakultas berstandar internasional yang berperan aktif dalam pengembangan pendidikan, riset,
+                dan entrepreneurship di bidang teknik elektro dan teknik fisika di Universitas Aman Sejahtera,
+                berbasis teknologi informasi
+            </p>
+
+            <h2 class="vm-title reveal-up">Misi</h2>
+
+            <!-- Row 1 (3 item) -->
+            <div class="vm-grid vm-grid-3">
+
+                <div class="vm-item reveal-up">
+                    <div class="vm-icon">
+                        <svg viewBox="0 0 24 24" fill="white">
+                            <path d="M12 2L4 5v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V5l-8-3z" />
+                        </svg>
+                    </div>
+                    <p>
+                        Menyelenggarakan sistem pendidikan yang berstandar internasional di bidang teknik elektro dan
+                        teknik fisika berbasis teknologi informasi
+                    </p>
+                </div>
+
+                <div class="vm-item reveal-up">
+                    <div class="vm-icon">
+                        <svg viewBox="0 0 24 24" fill="white">
+                            <path d="M12 2L4 5v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V5l-8-3z" />
+                        </svg>
+                    </div>
+                    <p>
+                        Menyelenggarakan, menyebarluaskan, dan memanfaatkan hasil riset berstandar internasional
+                        di bidang teknik elektro dan fisika
+                    </p>
+                </div>
+
+                <div class="vm-item reveal-up">
+                    <div class="vm-icon">
+                        <svg viewBox="0 0 24 24" fill="white">
+                            <path d="M12 2L4 5v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V5l-8-3z" />
+                        </svg>
+                    </div>
+                    <p>
+                        Menyelenggarakan program entrepreneurship berbasis teknologi di lingkungan Universitas
+                        Aman Sejahtera untuk mendukung pembangunan nasional
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Row 2 -->
+            <div class="vm-grid vm-grid-2">
+
+                <div class="vm-item reveal-up">
+                    <div class="vm-icon">
+                        <svg viewBox="0 0 24 24" fill="white">
+                            <path d="M12 2L4 5v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V5l-8-3z" />
+                        </svg>
+                    </div>
+                    <p>
+                        Mengembangkan jejaring dengan perguruan tinggi dan industri dalam dan luar negeri untuk
+                        kolaborasi pendidikan, riset, dan entrepreneurship
+                    </p>
+                </div>
+
+                <div class="vm-item reveal-up">
+                    <div class="vm-icon">
+                        <svg viewBox="0 0 24 24" fill="white">
+                            <path d="M12 2L4 5v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V5l-8-3z" />
+                        </svg>
+                    </div>
+                    <p>
+                        Mengembangkan sumber daya manusia untuk mencapai keunggulan dalam pendidikan, riset, dan
+                        entrepreneurship
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section class="prodi-section">
+        <h2 class="prodi-title">Program Studi</h2>
+        <p class="prodi-subtitle">Jelajahi beragam Program Studi yang sesuai minat kamu di Fakultas Elektro</p>
+
+        <div class="prodi-grid reveal-up">
+
+            <!-- KIRI (S1) -->
+            <div class="prodi-column">
+                <h3 class="prodi-click">Program Sarjana (S1) :</h3>
+                <ul class="prodi-list">
+                    <li><a href="#">S1 Teknik Elektro</a></li>
+                    <li><a href="#">S1 Teknik Telekomunikasi</a></li>
+                    <li><a href="#">S1 Teknik Fisika</a></li>
+                    <li><a href="#">S1 Teknik Komputer</a></li>
+                    <li><a href="#">S1 Teknik Biomedis</a></li>
+                    <li><a href="#">S1 Teknik Sistem Energi</a></li>
+                    <li><a href="#">S1 Teknik Telekomunikasi (Jakarta)</a></li>
+                    <li><a href="#">S1 Teknik Telekomunikasi (Surabaya)</a></li>
+                </ul>
+            </div>
+
+            <!-- TENGAH (S2) -->
+            <div class="prodi-column">
+                <h3 class="prodi-click">Program Magister (S2) :</h3>
+                <ul class="prodi-list">
+                    <li><a href="#">S2 Teknik Elektro</a></li>
+                </ul>
+            </div>
+
+            <!-- KANAN (S3) -->
+            <div class="prodi-column">
+                <h3 class="prodi-click">Program Doktoral (S3) :</h3>
+                <ul class="prodi-list">
+                    <li><a href="#">S3 Teknik Elektro</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="kerjasama-section reveal-up">
+        <h2 class="kerjasama-title">Kerja Sama</h2>
+        <p class="kerjasama-subtitle">
+            Telusuri keunggulan melalui kerja sama Fakultas Elektro
+        </p>
+
+        <div class="kerjasama-wrapper">
+            <img src="beasiswa.png" alt="Kerja Sama Fakultas Elektro">
+        </div>
+    </section>
+
+
+    <section class="sosmed-section reveal-up">
+        <h2 class="sosmed-title">Sosial Media</h2>
+        <p class="sosmed-subtitle">
+            Jadilah bagian dari perjalanan kami menuju inovasi dan keunggulan
+        </p>
+
+        <div class="sosmed-icons">
+            <a href="#" class="sosmed-icon" style="text-decoration:none;">
+                <i class="fa-brands fa-instagram" style="color:#000;"></i>
+            </a>
+
+            <a href="#" class="sosmed-icon" style="text-decoration:none;">
+                <i class="fa-brands fa-youtube" style="color:#000;"></i>
+            </a>
+
+        </div>
+    </section>
+
+
+    <!-- SECTION PEMANDANGAN FADE -->
+    <section class="pemandangan-fade-section">
+        <img src="pemandangan.png" alt="Pemandangan Kampus" class="pemandangan-fade-img">
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-container">
+
+                <!-- Bagian Kontak -->
+                <div class="footer-section">
+                    <h3>Kontak</h3>
+                    <div class="footer-logo">
+                        <img src="logokampus.png" alt="Universitas Aman Sejahtera" />
+                        <img src="logo.png" alt="Dikti Aman Sejahtera" />
+                    </div>
+
+                    <div class="footer-contact">
+                        <p><i class="fa-solid fa-location-dot"></i> Jl. Aman Sentosa No. 123, Bandung, Indonesia 40257
+                        </p>
+                        <p><i class="fa-solid fa-phone"></i> (022) 1234567</p>
+                        <p><i class="fa-solid fa-envelope"></i> info@universitasas.ac.id</p>
+                    </div>
+
+                    <div class="footer-sosmed">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                </div>
+
+                <!-- Bagian Kerjasama -->
+                <div class="footer-section">
+                    <h3>Kerjasama</h3>
+                    <ul>
+                        <li><a href="#">Bagian Kerjasama</a></li>
+                        <li><a href="#">Karier & Alumni</a></li>
+                        <li><a href="#">Kantor Internasional</a></li>
+                    </ul>
+
+                    <h3>Riset & Inovasi</h3>
+                    <ul>
+                        <li><a href="#">Pusat Penelitian & Pengabdian</a></li>
+                        <li><a href="#">Techno Park Aman Sejahtera</a></li>
+                        <li><a href="#">SDG's Center</a></li>
+                    </ul>
+
+                    <h3>Lainnya</h3>
+                    <ul>
+                        <li><a href="#">Berita Terkini</a></li>
+                        <li><a href="#">Unduh</a></li>
+                        <li><a href="#">Buletin</a></li>
+                        <li><a href="#">Direktori</a></li>
+                    </ul>
+                </div>
+
+                <!-- Bagian Akademik -->
+                <div class="footer-section">
+                    <h3>Akademik</h3>
+                    <ul>
+                        <li><a href="#">Standar Layanan Akademik</a></li>
+                        <li><a href="#">Perpustakaan</a></li>
+                        <li><a href="#">Sistem Akademik</a></li>
+                        <li><a href="#">Pusat Bahasa</a></li>
+                        <li><a href="#">Open CourseWare</a></li>
+                        <li><a href="#">Kampus Aman</a></li>
+                        <li><a href="#">Akreditasi</a></li>
+                        <li><a href="#">myUAS Mobile</a></li>
+                        <li><a href="#">Wisuda</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>© 2025 Universitas Aman Sejahtera | Kampus Aman dan Sejahtera</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        document.querySelectorAll(".prodi-click").forEach(header => {
+            header.addEventListener("click", () => {
+                const target = document.getElementById(header.dataset.target);
+                target.classList.toggle("active");
+            });
+        });
+    </script>
+
+
+
+    <script>
+        document.addEventListener("scroll", () => {
+            document.querySelectorAll(".reveal-up").forEach(el => {
+                const posisi = el.getBoundingClientRect().top;
+                const tinggiLayar = window.innerHeight;
+
+                if (posisi < tinggiLayar - 100) {
+                    el.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.18 }); // pilih nilai threshold tunggal yang cocok
+
+        document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-bottom')
+            .forEach(el => observer.observe(el));
+    </script>
+
+
+
+
+
+    <!-- === Tombol Scroll to Top === -->
+    <button id="scrollTopBtn" title="Kembali ke atas">
+        ↑
+    </button>
+
+    <script>
+        const btn = document.getElementById("scrollTopBtn");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 150) {
+                btn.classList.add("show");
+            } else {
+                btn.classList.remove("show");
+            }
+        });
+
+        btn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const navbar = document.querySelector(".navbar");
+            if (window.scrollY > 20) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

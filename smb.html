@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASA | Aman Sejahtera University</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="smb.css">
+
+</head>
+
+<body>
+
+
+    <header class="navbar">
+        <div class="nav-container">
+
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="logokampus.png" alt="Telkom University Logo">
+            </div>
+
+            <!-- HAMBURGER MOBILE -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- NAV MENU -->
+            <nav class="menu">
+                <div class="menu-item"><a href="#">Kampus ▾</a></div>
+                <div class="menu-item"><a href="#">Jurusan</a></div>
+
+                <!-- DROPDOWN SELEKSI -->
+                <div class="dropdown">
+                    <a href="#">Seleksi ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="pendaftaran.html">Petunjuk Pendaftaran</a>
+                        <a href="biayapend.html">Biaya Pendidikan</a>
+                        <a href="beasiswa.html">Beasiswa</a>
+                        <a href="">Foreign Student</a>
+                        <a href="">Jalur Seleksi</a>
+                    </div>
+                </div>
+
+                <!-- DROPDOWN PROGRAM -->
+                <div class="dropdown">
+                    <a href="#">Program ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="#">Sarjana</a>
+                        <a href="#">Pascasarjana</a>
+                        <a href="#">Online Learning</a>
+                        <a href="#">International Class</a>
+                        <a href="#">Double Degree</a>
+                    </div>
+                </div>
+
+                <div class="menu-item"><a href="#">Life at AS-Univ</a></div>
+
+                <!-- Pindahkan tombol ke dalam menu pada mobile -->
+                <div class="mobile-buttons">
+                    <button class="btn-red">Daftar KAS</button>
+                    <button class="btn-pink">Cek Kelulusan</button>
+                </div>
+            </nav>
+
+            <!-- BUTTONS DESKTOP -->
+            <div class="nav-buttons">
+                <button class="btn-red">Daftar KAS</button>
+                <button class="btn-pink">Cek Kelulusan</button>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        // Toggle menu utama
+        function toggleMenu() {
+            document.querySelector(".menu").classList.toggle("menu-open");
+            document.querySelector(".hamburger").classList.toggle("active");
+        }
+
+        // Toggle dropdown di mobile
+        document.querySelectorAll(".dropdown > a").forEach(item => {
+            item.addEventListener("click", function (e) {
+                e.preventDefault(); // cegah link default
+                let parent = item.parentElement;
+                parent.classList.toggle("open");
+            });
+        });
+    </script>
+
+
+
+
+
+    <section class="carousel-section">
+        <div class="carousel-container">
+
+            <div class="carousel-arrow left" onclick="prevSlide()">&#10094;</div>
+
+            <div class="carousel-wrapper">
+                <div class="carousel-slides">
+
+                    <div class="slide">
+                        <a href="#">
+                            <img src="pendaftaran.png">
+                        </a>
+                    </div>
+
+                    <div class="slide">
+                        <a href="#">
+                            <img src="beasiswa.png">
+                        </a>
+                    </div>
+
+                    <div class="slide">
+                        <a href="#">
+                            <img src="pemandangan.png">
+                        </a>
+                    </div>
+
+                    <div class="slide">
+                        <a href="#">
+                            <img src="under.png">
+                        </a>
+                    </div>
+
+                    <div class="slide">
+                        <a href="#">
+                            <img src="under.png">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="carousel-arrow right" onclick="nextSlide()">&#10095;</div>
+
+        </div>
+    </section>
+
+
+    <section class="kenapa-section">
+        <div class="kenapa-container">
+
+            <div class="kenapa-left">
+                <h1>Kenapa Telkom University</h1>
+
+                <div class="kenapa-item">
+                    <i class="fa-solid fa-medal emoji-black"></i>
+                    <span>Salah Satu PT Terbaik di Indonesia</span>
+                </div>
+
+                <div class="kenapa-item">
+                    <i class="fa-solid fa-landmark emoji-black"></i>
+                    <span>#450 Perguruan Tinggi Terbaik se-Asia</span>
+                </div>
+
+                <div class="kenapa-item">
+                    <i class="fa-solid fa-graduation-cap emoji-black"></i>
+                    <span>60 Program studi berbasis IT</span>
+                </div>
+
+                <a href="#">
+                    <button class="kenapa-btn">Selengkapnya</button>
+                </a>
+            </div>
+            <div class="kenapa-right">
+                <img src="orangrame.jpeg" class="kenapa-img">
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="fakta">
+        <h2 class="fakta-title">Fakta Telkom University</h2>
+
+        <div class="fakta-container">
+
+            <!-- DOSEN -->
+            <div class="fakta-box">
+                <i class="fa-solid fa-chalkboard-user fakta-icon"></i>
+                <div class="counter" data-target="1427">0</div>
+                <p>DOSEN</p>
+            </div>
+
+            <div class="fakta-divider"></div>
+
+            <!-- MAHASISWA -->
+            <div class="fakta-box">
+                <i class="fa-solid fa-people-group fakta-icon"></i>
+                <div class="counter" data-target="48127">0</div>
+                <p>MAHASISWA</p>
+            </div>
+
+            <div class="fakta-divider"></div>
+
+            <!-- ALUMNI -->
+            <div class="fakta-box">
+                <i class="fa-solid fa-user-graduate fakta-icon"></i>
+                <div class="counter" data-target="90773">0</div>
+                <p>ALUMNI</p>
+            </div>
+
+            <div class="fakta-divider"></div>
+
+            <!-- HEKTAR KAMPUS -->
+            <div class="fakta-box">
+                <i class="fa-solid fa-border-all fakta-icon"></i>
+                <div class="counter" data-target="55">0</div>
+                <p>HEKTAR KAMPUS</p>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="apresiasi-section">
+        <h2 class="apresiasi-title">Apresiasi</h2>
+        <p class="apresiasi-subtitle">Aman Sejahtera University “Creating The Future”</p>
+
+        <div class="apresiasi-logos">
+
+            <!-- Baris 1 -->
+            <img src="Logo-KEMENKES-RI.png" alt="Apresiasi 1">
+            <img src="Logo-SNI-Awards.png" alt="Apresiasi 2">
+            <img src="Logo-THE-WUR_Hitam-1.png" alt="Apresiasi 3">
+            <img src="Logo-UI-Green-Metric.png" alt="Apresiasi 4">
+            <img src="Logo-UNIRANKS.png" alt="Apresiasi 5">
+            <img src="Logo-THE-WUR_Hitam-1.png" alt="Apresiasi 6">
+
+            <!-- Baris 2 -->
+            <img src="Logo-KEMENKES-RI.png" alt="Apresiasi 7">
+            <img src="Logo-UNIRANKS.png" alt="Apresiasi 8">
+            <img src="Logo-KEMENKES-RI.png" alt="Apresiasi 9">
+            <img src="Logo-UI-Green-Metric.png" alt="Apresiasi 10">
+            <img src="Logo-SNI-Awards.png" alt="Apresiasi 11">
+            <img src="Logo-UI-Green-Metric.png" alt="Apresiasi 12">
+
+        </div>
+    </section>
+
+
+    <section class="hero-telutizen">
+        <div class="hero-inner">
+
+            <img src="orangrame.jpeg" class="hero-image" alt="Mahasiswa">
+
+            <div class="hero-card">
+                <h2>Bagaimana Menjadi <b>Telutizen</b></h2>
+                <p>
+                    Kembangkan minat dan bakat melalui keilmuan terbaru.
+                    Kini saatnya industri mencarimu
+                </p>
+
+                <a href="#">
+                    <button class="hero-btn">Selengkapnya</button>
+                </a>
+            </div>
+
+            <img src="dekor.png" class="hero-dekor" alt="Dekorasi">
+        </div>
+    </section>
+
+
+
+    <section class="tes-section">
+        <div class="tes-left">
+            <img src="logokampus.png" alt="logo gratis" class="tes-logo">
+
+            <img src="anakkaca.png" alt="anak mencari" class="tes-ilustrasi">
+        </div>
+
+        <div class="tes-right">
+            <h3 class="tes-subtitle">Masih bingung pilih jurusan?</h3>
+            <h1 class="tes-title">
+                Yuk Temukan Jurusan Terbaikmu<br>
+                Lewat <span>Tes Minat & Bakat</span>
+            </h1>
+
+            <div class="tes-box">
+                <p class="tes-desc">Ikuti sekarang, kapan pun kamu mau, gratis!</p>
+
+                <ul class="tes-list">
+                    <li>✔ 100% Gratis - Tanpa biaya</li>
+                    <li>✔ Bisa Kapan Saja - Tes fleksibel kapan saja tanpa jadwal</li>
+                    <li>✔ Akurat & Terpercaya - Hasil sesuai minat dan bakatmu</li>
+                    <li>✔ Langsung Dapat Hasil - Temukan jurusan terbaikmu</li>
+                </ul>
+
+                <a href="#" class="tes-btn">Mulai Tes Gratis Sekarang -></a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="event-smb-section">
+
+        <!-- JUDUL + SUB JUDUL -->
+        <div class="event-smb-header">
+            <h2>Event SMB Telkom University</h2>
+            <p>Temukan berbagai acara menarik yang dapat kamu ikuti</p>
+        </div>
+
+        <div class="event-smb-flex">
+
+            <!-- CARD KIRI (STATIS) -->
+            <div class="event-left-card">
+                <h3>Campus Visit</h3>
+                <p>Telkom University</p>
+                <button>Daftar</button>
+            </div>
+
+            <!-- CAROUSEL KANAN -->
+            <div class="event-right-carousel-container">
+
+                <div class="event-right-carousel" id="eventCarousel">
+                    <div class="event-item"><img src="berita.png"></div>
+                    <div class="event-item"><img src="beasiswa.png"></div>
+                    <div class="event-item"><img src="pemandangan.png"></div>
+                    <div class="event-item"><img src="pendaftaran.png"></div>
+                    <div class="event-item"><img src="under.png"></div>
+                </div>
+
+                <!-- ARROWS -->
+                <span class="event-arrow left" onclick="eventPrev()">‹</span>
+                <span class="event-arrow right" onclick="eventNext()">›</span>
+            </div>
+
+        </div>
+
+        <!-- TOMBOL SELENGKAPNYA -->
+        <div class="event-smb-more">
+            <button class="event-more-btn">Selengkapnya</button>
+        </div>
+
+    </section>
+
+
+    <section class="testi-section">
+        <h2 class="testi-title">Apa Kata Mereka</h2>
+        <p class="testi-subtitle">
+            Lebih dari puluhan ribu alumni memiliki pengalaman berharga yang membantu mereka
+            memberikan kontribusi nyata untuk Indonesia
+        </p>
+
+        <div class="testi-wrapper">
+            <div class="testi-track">
+
+                <div class="testi-item">
+                    <div class="testi-img">
+                        <img src="AL1.png">
+                        <div class="testi-overlay">
+                            <h3>Rizky Ananda</h3>
+                            <p>Founder & CTO SolusiData<br>Aman Sejahtera Universitas</p>
+                        </div>
+                    </div>
+                    <div class="testi-quote">❝</div>
+                    <p class="testi-text">Mulailah lebih cepat. Habiskan jatah gagalnya agar sukses datang lebih cepat.
+                    </p>
+                </div>
+
+                <div class="testi-item">
+                    <div class="testi-img">
+                        <img src="AL2.png">
+                        <div class="testi-overlay">
+                            <h3>Fadil Mahendra</h3>
+                            <p>Fotografer Profesional<br>Aman Sejahtera Universitas</p>
+                        </div>
+                    </div>
+                    <div class="testi-quote">❝</div>
+                    <p class="testi-text">Kampus ini memberi banyak ruang untuk berkembang dan berjejaring.</p>
+                </div>
+
+                <div class="testi-item">
+                    <div class="testi-img">
+                        <img src="AL3.png">
+                        <div class="testi-overlay">
+                            <h3>Rama Prasetyo</h3>
+                            <p>Engineer Jaringan – PT Nusantara Net<br>Aman Sejahtera Universitas</p>
+                        </div>
+                    </div>
+                    <div class="testi-quote">❝</div>
+                    <p class="testi-text">Saya mendapatkan wawasan dan pengalaman untuk bersaing secara global.</p>
+                </div>
+
+                <div class="testi-item">
+                    <div class="testi-img">
+                        <img src="AL4.png">
+                        <div class="testi-overlay">
+                            <h3>Naila Rahmadina</h3>
+                            <p>Creative Director – Studio Aruna<br>Aman Sejahtera Universitas</p>
+                        </div>
+                    </div>
+                    <div class="testi-quote">❝</div>
+                    <p class="testi-text">Setiap mata kuliah memberi pengalaman berarti yang sangat berharga.</p>
+                </div>
+
+                <div class="testi-item">
+                    <div class="testi-img">
+                        <img src="AL5.png">
+                        <div class="testi-overlay">
+                            <h3>Farhan Dirgantara</h3>
+                            <p>Software Developer – INOVA Tech<br>Aman Sejahtera Universitas</p>
+                        </div>
+                    </div>
+                    <div class="testi-quote">❝</div>
+                    <p class="testi-text">Lingkungan belajar yang suportif membuat saya berkembang lebih cepat.</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="testi-dots">
+            <span class="testi-dot active" data-index="0"></span>
+            <span class="testi-dot" data-index="1"></span>
+            <span class="testi-dot" data-index="2"></span>
+            <span class="testi-dot" data-index="3"></span>
+            <span class="testi-dot" data-index="4"></span>
+        </div>
+    </section>
+
+
+    <section class="cerita-section">
+        <h2 class="cerita-title">Cerita Aman Sejahtera</h2>
+        <p class="cerita-subtitle">
+            Cari tahu informasi terbaru dari Aman Sejahtera University di sini
+        </p>
+
+        <div class="cerita-container">
+
+            <!-- CARD BESAR KIRI -->
+            <div class="cerita-large">
+                <img src="berita.png" alt="">
+                <div class="cerita-date">28 November 2025</div>
+                <h3 class="cerita-large-title">
+                    Program Teknologi Informasi: Pilihan Konsentrasi Terbaik
+                </h3>
+                <p class="cerita-large-text">
+                    Program TI Aman Sejahtera University menawarkan berbagai konsentrasi
+                    untuk mendalami AI, sistem informasi, dan teknologi masa depan.
+                </p>
+            </div>
+
+            <!-- GRID KANAN (4 ITEM) -->
+            <div class="cerita-grid">
+                <div class="cerita-item">
+                    <img src="berita.png">
+                    <div class="cerita-date">27 November 2025</div>
+                    <h4>Jalan Menuju Karier Profesional yang Lebih Kompetitif</h4>
+                </div>
+
+                <div class="cerita-item">
+                    <img src="berita.png">
+                    <div class="cerita-date">19 November 2025</div>
+                    <h4>Peran Teknologi Kesehatan dalam Masa Depan Medis</h4>
+                </div>
+
+                <div class="cerita-item">
+                    <img src="berita.png">
+                    <div class="cerita-date">18 November 2025</div>
+                    <h4>Kreativitas Digital: Mewujudkan Seni Modern yang Menginspirasi</h4>
+                </div>
+
+                <div class="cerita-item">
+                    <img src="berita.png">
+                    <div class="cerita-date">14 November 2025</div>
+                    <h4>Pembelajaran Bisnis Digital dan Persiapan Karier Sejak Dini</h4>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cerita-btn-wrap">
+            <button class="cerita-btn">Selengkapnya</button>
+        </div>
+    </section>
+
+
+
+
+    <section class="sosmed-section">
+
+        <h2 class="sosmed-title">Aman Sejahtera Hadir di Media Sosial</h2>
+        <p class="sosmed-subtitle">Follow kami agar tidak ketinggalan informasi ter-update setiap hari</p>
+
+        <div class="sosmed-header">
+            <div class="sosmed-profile">
+                <img src="logokampus.png" alt="Logo">
+                <div class="sosmed-info">
+                    <h3>@amansejahtera</h3>
+                    <p class="followers">162.5K Followers</p>
+                    <p class="desc">
+                        Admisi Aman Sejahtera University <br>
+                        Universitas Swasta #1 Terbaik di Indonesia | Toward Research and Entrepreneurial University
+                    </p>
+                </div>
+            </div>
+
+            <button class="sosmed-btn">Follow on Instagram</button>
+        </div>
+
+        <div class="sosmed-grid">
+            <img src="berita.png" alt="">
+            <img src="berita.png" alt="">
+            <img src="berita.png" alt="">
+            <img src="berita.png" alt="">
+        </div>
+
+    </section>
+
+
+    <footer class="footer-section">
+        <div class="footer-container">
+
+            <!-- Logo + Alamat -->
+            <div class="footer-col footer-left">
+                <img src="logokampus.png" alt="Aman Sejahtera University" class="footer-logo">
+
+                <h3 class="footer-title">Alamat</h3>
+                <p class="footer-text">
+                    Aman Sejahtera University<br>
+                    Ruang Layanan Admisi,<br>
+                    Grha Cacuk Wiyata, Gedung A<br>
+                    Jl. Pendidikan Sejahtera No. 1 Indonesia, 40257
+                </p>
+            </div>
+
+            <!-- FAQ -->
+            <div class="footer-col">
+                <h3 class="footer-head">FAQ</h3>
+                <ul class="footer-list">
+                    <li>Umum</li>
+                    <li>Persyaratan Pendaftaran</li>
+                    <li>Jalur Seleksi</li>
+                    <li>Ujian</li>
+                    <li>Pengumuman</li>
+                    <li>Registrasi</li>
+                    <li>Beasiswa</li>
+                </ul>
+            </div>
+
+            <!-- Artikel -->
+            <div class="footer-col">
+                <h3 class="footer-head">Artikel</h3>
+                <ul class="footer-list">
+                    <li>Tren Kampus</li>
+                    <li>Fakta Jurusan</li>
+                    <li>Kisah Sukses</li>
+                    <li>Tips dan Trik</li>
+                </ul>
+            </div>
+
+            <!-- Pertanyaan -->
+            <div class="footer-col footer-right">
+                <h2 class="footer-ask">Ada<br>Pertanyaan?</h2>
+                <p class="footer-desc">
+                    Hubungi kami sekarang, jika ada<br>
+                    pertanyaan lebih lanjut.
+                </p>
+                <button class="footer-button">Kontak Kami</button>
+            </div>
+
+        </div>
+
+        <p class="footer-copy">Copyright ©2025 All Rights Reserved By Aman Sejahtera University</p>
+    </footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const track = document.querySelector(".testi-track");
+            const originals = Array.from(document.querySelectorAll(".testi-item"));
+            const dots = document.querySelectorAll(".testi-dot");
+
+            const N = originals.length;
+            if (N === 0) return;
+
+            // === CLONE UNTUK INFINITY ===
+            track.querySelectorAll(".clone")?.forEach(n => n.remove());
+
+            const prepend = originals.map(o => { let c = o.cloneNode(true); c.classList.add("clone"); return c; });
+            const append = originals.map(o => { let c = o.cloneNode(true); c.classList.add("clone"); return c; });
+
+            append.forEach(c => track.appendChild(c));
+            prepend.reverse().forEach(c => track.insertBefore(c, track.firstChild));
+
+            let items = Array.from(document.querySelectorAll(".testi-item"));
+
+            const getStep = () => {
+                let w = items[0].offsetWidth;
+                let gap = parseFloat(getComputedStyle(track).gap) || 0;
+                return w + gap;
+            }
+
+            let index = N;  // mulai dari item asli pertama
+            let step = getStep();
+            let anim = false;
+
+            track.style.transition = "none";
+            track.style.transform = `translateX(-${index * step}px)`;
+
+            // === UPDATE DOT ===
+            const updateDots = () => {
+                let realIndex = (index - N) % N;
+                if (realIndex < 0) realIndex += N;
+                dots.forEach((d, i) => d.classList.toggle("active", i === realIndex));
+            };
+            updateDots();
+
+            // === GERAK ===
+            const goTo = (i, animate = true) => {
+                track.style.transition = animate ? "transform 0.45s ease" : "none";
+                track.style.transform = `translateX(-${i * step}px)`;
+            };
+
+            const fixLoop = () => {
+                if (index >= 2 * N) {
+                    index = N;
+                    goTo(index, false);
+                }
+                if (index < N) {
+                    index = 2 * N - 1;
+                    goTo(index, false);
+                }
+                updateDots();
+                anim = false;
+            };
+
+            track.addEventListener("transitionend", fixLoop);
+
+            // === AUTOPLAY INFINITE ===
+            setInterval(() => {
+                if (anim) return;
+                anim = true;
+                index++;
+                step = getStep();
+                goTo(index);
+                updateDots();
+            }, 3500);
+
+            // === DOT CLICK ===
+            dots.forEach((dot, i) => {
+                dot.addEventListener("click", () => {
+                    index = N + i; // pindah ke original item
+                    goTo(index);
+                    updateDots();
+                });
+            });
+
+            // === RESIZE ===
+            window.addEventListener("resize", () => {
+                step = getStep();
+                goTo(index, false);
+            });
+
+        });
+    </script>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const track = document.querySelector(".event-right-carousel");
+            if (!track) return;
+
+            // ambil node asli
+            const originals = Array.from(track.querySelectorAll(".event-item"));
+            const N = originals.length;
+            if (N === 0) return;
+
+            // hapus kemungkinan clone sisa dulu (jika ada)
+            track.querySelectorAll(".event-item.clone-generated")?.forEach(n => n.remove());
+
+            // buat clones: prepend (N), append (N)
+            const prependClones = originals.map(item => {
+                const c = item.cloneNode(true);
+                c.classList.add("clone-generated");
+                return c;
+            });
+            const appendClones = originals.map(item => {
+                const c = item.cloneNode(true);
+                c.classList.add("clone-generated");
+                return c;
+            });
+
+            // tambahkan append di akhir, prepend di depan
+            appendClones.forEach(c => track.appendChild(c));
+            prependClones.reverse().forEach(c => track.insertBefore(c, track.firstChild));
+
+            // update daftar semua item
+            let allItems = Array.from(track.querySelectorAll(".event-item"));
+            const total = allItems.length; // 3 * N
+
+            // util step
+            const getStep = () => {
+                const card = allItems[0];
+                const cardW = card.offsetWidth;
+                const gapStr = getComputedStyle(track).gap || getComputedStyle(track).columnGap || "0px";
+                const gap = parseFloat(gapStr) || 0;
+                return cardW + gap;
+            };
+
+            let index = N;
+            let step = getStep();
+            let isAnimating = false;
+
+            const setTransformNoAnim = (i) => {
+                track.style.transition = "none";
+                track.style.transform = `translateX(-${i * step}px)`;
+            };
+
+            const setTransformWithAnim = (i, duration = 400) => {
+                track.style.transition = `transform ${duration}ms ease`;
+                track.style.transform = `translateX(-${i * step}px)`;
+            };
+
+            setTransformNoAnim(index);
+            requestAnimationFrame(() => { track.style.transition = "none"; });
+
+            const onTransitionEnd = () => {
+                const leftCloneLastIndex = N - 1;
+                const rightCloneFirstIndex = 2 * N;
+
+                if (index >= rightCloneFirstIndex) {
+                    index = N;
+                    setTransformNoAnim(index);
+                }
+
+                if (index <= leftCloneLastIndex) {
+                    index = 2 * N - 1;
+                    setTransformNoAnim(index);
+                }
+
+                isAnimating = false;
+            };
+
+            track.addEventListener("transitionend", onTransitionEnd);
+
+            window.eventNext = () => {
+                if (isAnimating) return;
+                isAnimating = true;
+                step = getStep();
+                index++;
+                setTransformWithAnim(index, 400);
+            };
+
+            window.eventPrev = () => {
+                if (isAnimating) return;
+                isAnimating = true;
+                step = getStep();
+                index--;
+                setTransformWithAnim(index, 400);
+            };
+
+            let resizeTimer;
+            window.addEventListener("resize", () => {
+                clearTimeout(resizeTimer);
+                track.style.transition = "none";
+                step = getStep();
+                track.style.transform = `translateX(-${index * step}px)`;
+                resizeTimer = setTimeout(() => { track.style.transition = ""; }, 60);
+            });
+
+            setInterval(() => {
+                if (isAnimating) return;
+                window.eventNext();       // gunakan fungsi yang sudah ada
+            }, 5000);
+
+        });
+    </script>
+
+
+
+
+
+    <!-- Script Counter -->
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        let started = false;
+
+        function countUp() {
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const duration = 2000;
+                const startTime = performance.now();
+
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const current = Math.floor(progress * target);
+
+                    counter.textContent = current.toLocaleString();
+
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    } else {
+                        counter.textContent = target.toLocaleString();
+                    }
+                }
+
+                requestAnimationFrame(update);
+            });
+        }
+
+        function checkScroll() {
+            const faktaSection = document.querySelector('.fakta'); // ← FIX DI SINI
+            const rect = faktaSection.getBoundingClientRect();
+
+            if (rect.top < window.innerHeight - 100 && !started) {
+                started = true;
+                countUp();
+            }
+        }
+
+        window.addEventListener('scroll', checkScroll);
+    </script>
+
+
+
+
+    <script>
+
+        const slidesContainer = document.querySelector(".carousel-slides");
+        let slides = document.querySelectorAll(".carousel-slides .slide");
+
+        let index = 1;
+        let isAnimating = false;
+
+        // --- CLONE FIRST & LAST ---
+        const firstClone = slides[0].cloneNode(true);
+        const lastClone = slides[slides.length - 1].cloneNode(true);
+
+        firstClone.classList.add("clone");
+        lastClone.classList.add("clone");
+
+        slidesContainer.appendChild(firstClone);
+        slidesContainer.insertBefore(lastClone, slidesContainer.firstChild);
+
+        slides = document.querySelectorAll(".carousel-slides .slide");
+
+        // --- POSISI AWAL (slide pertama asli) ---
+        slidesContainer.style.transform = `translateX(-100%)`;
+
+
+        function goToSlide(i) {
+            if (isAnimating) return;
+            isAnimating = true;
+
+            index = i;
+            slidesContainer.style.transition = "transform 0.6s ease";
+            slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+
+            setTimeout(() => {
+
+                // Jika masuk ke CLONE LAST (pindah ke asli terakhir)
+                if (slides[index].classList.contains("clone") && index === 0) {
+                    slidesContainer.style.transition = "none";
+                    index = slides.length - 2;
+                    slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+                }
+
+                // Jika masuk ke CLONE FIRST (pindah ke asli pertama)
+                if (slides[index].classList.contains("clone") && index === slides.length - 1) {
+                    slidesContainer.style.transition = "none";
+                    index = 1;
+                    slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+                }
+
+                isAnimating = false;
+
+            }, 610);
+        }
+
+
+        function nextSlide() {
+            goToSlide(index + 1);
+        }
+
+        function prevSlide() {
+            goToSlide(index - 1);
+        }
+
+
+        setInterval(() => {
+            nextSlide();
+        }, 5000);
+
+
+    </script>
+
+
+
+</body>
+
+</html>
